@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="CHINA_BILLING|Win32">
+      <Configuration>CHINA_BILLING</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="CHINA_LOCALIZING|Win32">
+      <Configuration>CHINA_LOCALIZING</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="CHINA_TEST_BILLING|Win32">
+      <Configuration>CHINA_TEST_BILLING</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_with_NEW_COMMAND|Win32">
+      <Configuration>Debug_with_NEW_COMMAND</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="JAPAN_LOCALIZING|Win32">
+      <Configuration>JAPAN_LOCALIZING</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="TAIWAN_LOCALIZING|Win32">
+      <Configuration>TAIWAN_LOCALIZING</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{15B98713-613E-4198-BC91-D6812829C304}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.35707.178</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">
+    <OutDir>.\WorldServer___Win32_JAPAN_LOCALIZING\</OutDir>
+    <IntDir>.\WorldServer___Win32_JAPAN_LOCALIZING\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">
+    <OutDir>.\WorldServer___Win32_CHINA_LOCALIZING\</OutDir>
+    <IntDir>.\WorldServer___Win32_CHINA_LOCALIZING\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">
+    <OutDir>.\WorldServer___Win32_TAIWAN_LOCALIZING\</OutDir>
+    <IntDir>.\WorldServer___Win32_TAIWAN_LOCALIZING\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>D:\[Source]\DEVELOP_V1\INNER\2_WorldServer Configurations\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">
+    <OutDir>.\WorldServer___Win32_CHINA_BILLING\</OutDir>
+    <IntDir>.\WorldServer___Win32_CHINA_BILLING\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">
+    <OutDir>.\WorldServer___Win32_Debug_with_NEW_COMMAND0\</OutDir>
+    <IntDir>.\WorldServer___Win32_Debug_with_NEW_COMMAND0\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">
+    <OutDir>.\WorldServer___Win32_CHINA_TEST_BILLING\</OutDir>
+    <IntDir>.\WorldServer___Win32_CHINA_TEST_BILLING\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">
+    <Midl>
+      <TypeLibraryName>.\WorldServer___Win32_JAPAN_LOCALIZING/WorldServer.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;JAPAN_LOCALIZING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\WorldServer___Win32_JAPAN_LOCALIZING/WorldServer.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\WorldServer___Win32_JAPAN_LOCALIZING/</AssemblerListingLocation>
+      <ObjectFileName>.\WorldServer___Win32_JAPAN_LOCALIZING/</ObjectFileName>
+      <ProgramDataBaseFileName>.\WorldServer___Win32_JAPAN_LOCALIZING/</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\corum\inner\2_worldserver configurations/WorldServer.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\WorldServer___Win32_JAPAN_LOCALIZING/WorldServer.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">
+    <Midl>
+      <TypeLibraryName>.\WorldServer___Win32_CHINA_LOCALIZING/WorldServer.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;CHINA_LOCALIZING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\WorldServer___Win32_CHINA_LOCALIZING/WorldServer.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\WorldServer___Win32_CHINA_LOCALIZING/</AssemblerListingLocation>
+      <ObjectFileName>.\WorldServer___Win32_CHINA_LOCALIZING/</ObjectFileName>
+      <ProgramDataBaseFileName>.\WorldServer___Win32_CHINA_LOCALIZING/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\WorldServer___Win32_CHINA_LOCALIZING/WorldServer.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\WorldServer___Win32_CHINA_LOCALIZING/WorldServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">
+    <Midl>
+      <TypeLibraryName>.\WorldServer___Win32_TAIWAN_LOCALIZING/WorldServer.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;TAIWAN_LOCALIZING;BILLING_CHECK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\WorldServer___Win32_TAIWAN_LOCALIZING/WorldServer.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\WorldServer___Win32_TAIWAN_LOCALIZING/</AssemblerListingLocation>
+      <ObjectFileName>.\WorldServer___Win32_TAIWAN_LOCALIZING/</ObjectFileName>
+      <ProgramDataBaseFileName>.\WorldServer___Win32_TAIWAN_LOCALIZING/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\corum\inner\2_worldserver configurationsTW/WorldServer.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\WorldServer___Win32_TAIWAN_LOCALIZING/WorldServer.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <TypeLibraryName>.\Debug/WorldServer.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/WorldServer.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>D:\[Source]\DEVELOP_V1\INNER\2_WorldServer Configurations/WorldServer.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)WorldServer.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)WorldServer.map</MapFileName>
+      <MapExports>true</MapExports>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">
+    <Midl>
+      <TypeLibraryName>.\WorldServer___Win32_CHINA_BILLING/WorldServer.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;CHINA_LOCALIZING;CHINA_BILLING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\WorldServer___Win32_CHINA_BILLING/WorldServer.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\WorldServer___Win32_CHINA_BILLING/</AssemblerListingLocation>
+      <ObjectFileName>.\WorldServer___Win32_CHINA_BILLING/</ObjectFileName>
+      <ProgramDataBaseFileName>.\WorldServer___Win32_CHINA_BILLING/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\WorldServer___Win32_CHINA_BILLING/WorldServer.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\WorldServer___Win32_CHINA_BILLING/WorldServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <TypeLibraryName>.\Release/WorldServer.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/WorldServer.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release/WorldServer.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Release/WorldServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">
+    <Midl>
+      <TypeLibraryName>.\WorldServer___Win32_Debug_with_NEW_COMMAND0/WorldServer.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;NEW_COMMAND;DEV_MODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\WorldServer___Win32_Debug_with_NEW_COMMAND0/WorldServer.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\WorldServer___Win32_Debug_with_NEW_COMMAND0/</AssemblerListingLocation>
+      <ObjectFileName>.\WorldServer___Win32_Debug_with_NEW_COMMAND0/</ObjectFileName>
+      <ProgramDataBaseFileName>.\WorldServer___Win32_Debug_with_NEW_COMMAND0/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\WorldServer___Win32_Debug_with_NEW_COMMAND0/WorldServer.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\WorldServer___Win32_Debug_with_NEW_COMMAND0/WorldServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">
+    <Midl>
+      <TypeLibraryName>.\WorldServer___Win32_CHINA_TEST_BILLING/WorldServer.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;CHINA_LOCALIZING;CHINA_BILLING;CHINA_TEST_BILLING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\WorldServer___Win32_CHINA_TEST_BILLING/WorldServer.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\WorldServer___Win32_CHINA_TEST_BILLING/</AssemblerListingLocation>
+      <ObjectFileName>.\WorldServer___Win32_CHINA_TEST_BILLING/</ObjectFileName>
+      <ProgramDataBaseFileName>.\WorldServer___Win32_CHINA_TEST_BILLING/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0412</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;WS2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\WorldServer___Win32_CHINA_TEST_BILLING/WorldServer.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\WorldServer___Win32_CHINA_TEST_BILLING/WorldServer.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AcceptTable.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="ChatLog.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="ChinaBillingProc.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="ConnectionDistributionTable.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="DBProc.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="DebugLog.cpp" />
+    <ClCompile Include="DungeonTable.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="DUNGEON_DATA_EX.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="EventDungeonManager.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="Guild.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="GuildHash.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="GuildWar.cpp" />
+    <ClCompile Include="Linkedlist.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="LinkedListEx.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="LocaMgr.cpp" />
+    <ClCompile Include="Map.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="Messenger.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="MessengerHash.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="MsgProc.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="MsgProcForServer.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="MsgProcForServerFromAgent.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="MsgProcForServerGuild.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="MsgProcForServerParty.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="MsgProcForServerPortal.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="NameSearchTable.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="NTOS.CPP">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="OnlyList.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="OwnServer.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="Party.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="PartyHash.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="PartyMatcher.cpp" />
+    <ClCompile Include="recvmsg.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="RivalGuildWar.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="RivalGuildWarLib.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="SchoolGuildDungeon.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="ServerFunction.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="ServerTable.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="StadiumMgr.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Create</PrecompiledHeader>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Create</PrecompiledHeader>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Create</PrecompiledHeader>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Create</PrecompiledHeader>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Create</PrecompiledHeader>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WorldServer.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="WorldUser.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <ClCompile Include="WorldUserTable.cpp">
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_BILLING|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">Neither</FavorSizeOrSpeed>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='CHINA_TEST_BILLING|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug_with_NEW_COMMAND|Win32'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='JAPAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='TAIWAN_LOCALIZING|Win32'">Neither</FavorSizeOrSpeed>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AcceptTable.h" />
+    <ClInclude Include="ChatLog.h" />
+    <ClInclude Include="ChinaBillingProc.h" />
+    <ClInclude Include="ConnectionDistributionTable.h" />
+    <ClInclude Include="DBProc.h" />
+    <ClInclude Include="DebugLog.h" />
+    <ClInclude Include="DungeonTable.h" />
+    <ClInclude Include="DUNGEON_DATA.h" />
+    <ClInclude Include="DUNGEON_DATA_EX.h" />
+    <ClInclude Include="EventDungeonManager.h" />
+    <ClInclude Include="GlobalDefine.h" />
+    <ClInclude Include="Guild.h" />
+    <ClInclude Include="GuildDef.h" />
+    <ClInclude Include="GuildHash.h" />
+    <ClInclude Include="GuildMatcher.h" />
+    <ClInclude Include="GuildMatchHandler.h" />
+    <ClInclude Include="HS_HASH.h" />
+    <ClInclude Include="HS_LIST.h" />
+    <ClInclude Include="Linkedlist.h" />
+    <ClInclude Include="LinkedListEx.h" />
+    <ClInclude Include="LocalMgr.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="Matcher.h" />
+    <ClInclude Include="MatcherResult.h" />
+    <ClInclude Include="MatchHandler.h" />
+    <ClInclude Include="MatchResult.h" />
+    <ClInclude Include="Messenger.h" />
+    <ClInclude Include="MessengerDef.h" />
+    <ClInclude Include="MessengerHash.h" />
+    <ClInclude Include="MsgProc.h" />
+    <ClInclude Include="MsgProcForServer.h" />
+    <ClInclude Include="MsgProcForServerFromAgent.h" />
+    <ClInclude Include="MsgProcForServerGuild.h" />
+    <ClInclude Include="MsgProcForServerParty.h" />
+    <ClInclude Include="MsgProcForServerPortal.h" />
+    <ClInclude Include="NameSearchTable.h" />
+    <ClInclude Include="NTOS.H" />
+    <ClInclude Include="OnlyList.h" />
+    <ClInclude Include="OwnServer.h" />
+    <ClInclude Include="Party.h" />
+    <ClInclude Include="PartyDef.h" />
+    <ClInclude Include="PartyHash.h" />
+    <ClInclude Include="PartyMatcher.h" />
+    <ClInclude Include="recvmsg.h" />
+    <ClInclude Include="RivalGuildWar.h" />
+    <ClInclude Include="RivalGuildWarLib.h" />
+    <ClInclude Include="SchoolGuildDungeon.h" />
+    <ClInclude Include="Section.h" />
+    <ClInclude Include="ServerFunction.h" />
+    <ClInclude Include="ServerTable.h" />
+    <ClInclude Include="StadiumMgr.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="WorldUser.h" />
+    <ClInclude Include="WorldUserTable.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CommonServer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="CommonServer.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

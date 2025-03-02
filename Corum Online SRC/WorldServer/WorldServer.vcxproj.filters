@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ba397e44-7e6a-47ec-92ab-cd5ec8e9eb65}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{c011bb34-4f34-4761-80df-70edce7dcc64}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Container">
+      <UniqueIdentifier>{e7c6b59c-a558-49e2-8116-c73c8605ebaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ChinaBilling">
+      <UniqueIdentifier>{24314f52-4316-42de-a627-1bcb8c2d39c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Party&amp;Guild&amp;Messenger">
+      <UniqueIdentifier>{4c98115e-741c-420f-88fa-ff5ba47f7057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MsgProcForServer">
+      <UniqueIdentifier>{bfe3eb4b-12ab-48cc-bb44-3b63a8e2e261}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommonServer">
+      <UniqueIdentifier>{25166ff2-892b-4ebc-9e52-0df5fda8b66f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dungeon">
+      <UniqueIdentifier>{ff39e464-fb28-4d2c-95ff-350ca578018c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{412329d8-6425-4639-85bf-3856775909d7}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Local">
+      <UniqueIdentifier>{c727b0f1-eaf3-4727-96dc-e27c971993d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TeamMatch">
+      <UniqueIdentifier>{1db8715b-77f6-467a-a66c-68f9dd4ce28f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AcceptTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectionDistributionTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBProc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgProc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NameSearchTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NTOS.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OwnServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PartyMatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="recvmsg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldUserTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Linkedlist.cpp">
+      <Filter>Container</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListEx.cpp">
+      <Filter>Container</Filter>
+    </ClCompile>
+    <ClCompile Include="OnlyList.cpp">
+      <Filter>Container</Filter>
+    </ClCompile>
+    <ClCompile Include="ChinaBillingProc.cpp">
+      <Filter>ChinaBilling</Filter>
+    </ClCompile>
+    <ClCompile Include="Guild.cpp">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClCompile>
+    <ClCompile Include="GuildHash.cpp">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClCompile>
+    <ClCompile Include="Messenger.cpp">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClCompile>
+    <ClCompile Include="MessengerHash.cpp">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClCompile>
+    <ClCompile Include="Party.cpp">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClCompile>
+    <ClCompile Include="PartyHash.cpp">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgProcForServer.cpp">
+      <Filter>MsgProcForServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgProcForServerFromAgent.cpp">
+      <Filter>MsgProcForServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgProcForServerGuild.cpp">
+      <Filter>MsgProcForServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgProcForServerParty.cpp">
+      <Filter>MsgProcForServer</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgProcForServerPortal.cpp">
+      <Filter>MsgProcForServer</Filter>
+    </ClCompile>
+    <ClCompile Include="DUNGEON_DATA_EX.cpp">
+      <Filter>Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonTable.cpp">
+      <Filter>Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="EventDungeonManager.cpp">
+      <Filter>Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="SchoolGuildDungeon.cpp">
+      <Filter>Dungeon</Filter>
+    </ClCompile>
+    <ClCompile Include="LocaMgr.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugLog.cpp">
+      <Filter>TeamMatch</Filter>
+    </ClCompile>
+    <ClCompile Include="GuildWar.cpp">
+      <Filter>TeamMatch</Filter>
+    </ClCompile>
+    <ClCompile Include="RivalGuildWar.cpp">
+      <Filter>TeamMatch</Filter>
+    </ClCompile>
+    <ClCompile Include="RivalGuildWarLib.cpp">
+      <Filter>TeamMatch</Filter>
+    </ClCompile>
+    <ClCompile Include="StadiumMgr.cpp">
+      <Filter>TeamMatch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Matcher.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PartyMatcher.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AcceptTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectionDistributionTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DBProc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalDefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgProc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NameSearchTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NTOS.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OwnServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="recvmsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Section.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldUser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldUserTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Linkedlist.h">
+      <Filter>Container</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedListEx.h">
+      <Filter>Container</Filter>
+    </ClInclude>
+    <ClInclude Include="OnlyList.h">
+      <Filter>Container</Filter>
+    </ClInclude>
+    <ClInclude Include="ChinaBillingProc.h">
+      <Filter>ChinaBilling</Filter>
+    </ClInclude>
+    <ClInclude Include="Guild.h">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClInclude>
+    <ClInclude Include="GuildDef.h">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClInclude>
+    <ClInclude Include="GuildHash.h">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClInclude>
+    <ClInclude Include="Messenger.h">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClInclude>
+    <ClInclude Include="MessengerDef.h">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClInclude>
+    <ClInclude Include="MessengerHash.h">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClInclude>
+    <ClInclude Include="Party.h">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClInclude>
+    <ClInclude Include="PartyDef.h">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClInclude>
+    <ClInclude Include="PartyHash.h">
+      <Filter>Party&amp;Guild&amp;Messenger</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgProcForServer.h">
+      <Filter>MsgProcForServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgProcForServerFromAgent.h">
+      <Filter>MsgProcForServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgProcForServerGuild.h">
+      <Filter>MsgProcForServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgProcForServerParty.h">
+      <Filter>MsgProcForServer</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgProcForServerPortal.h">
+      <Filter>MsgProcForServer</Filter>
+    </ClInclude>
+    <ClInclude Include="DUNGEON_DATA.h">
+      <Filter>Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="DUNGEON_DATA_EX.h">
+      <Filter>Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonTable.h">
+      <Filter>Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="EventDungeonManager.h">
+      <Filter>Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="SchoolGuildDungeon.h">
+      <Filter>Dungeon</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalMgr.h">
+      <Filter>Local</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugLog.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+    <ClInclude Include="GuildMatcher.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+    <ClInclude Include="GuildMatchHandler.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+    <ClInclude Include="HS_HASH.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+    <ClInclude Include="HS_LIST.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+    <ClInclude Include="MatcherResult.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+    <ClInclude Include="MatchHandler.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+    <ClInclude Include="MatchResult.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+    <ClInclude Include="RivalGuildWar.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+    <ClInclude Include="RivalGuildWarLib.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+    <ClInclude Include="StadiumMgr.h">
+      <Filter>TeamMatch</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CommonServer.dll">
+      <Filter>CommonServer</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="CommonServer.lib">
+      <Filter>CommonServer</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
