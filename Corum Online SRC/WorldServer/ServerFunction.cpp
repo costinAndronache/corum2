@@ -413,7 +413,7 @@ void TerminateServer()
 	if(g_pThis)
 		delete g_pThis;
 
-	for(i=0;i<23;i++)
+	for(int i=0;i<23;i++)
 		g_pNet->PauseTimer(i);
 
 	g_bIsServerRunning = FALSE;
@@ -1912,7 +1912,7 @@ void QueryAllServer()
 	// 분단위로 계산
 	DWORD dwSubLocalTime = 0;
 
-	for(i = 0; i < nRet; i++)
+	for(int i = 0; i < nRet; i++)
 	{
 		DUNGEON_DATA_EX* pDungeon = g_pDungeonTable->AllocNewDungeon( (WORD)rs[i].m_dwID );
 		memcpy((DUNGEON_DATA*)pDungeon, &rs[i], sizeof(DUNGEON_DATA));
@@ -2034,7 +2034,7 @@ BOOL QueryWorldmapFormation()
 	{
 		if(bFormedID[i])
 		{
-			g_pMap[ bFormedID[i] ] = new CMap;
+			g_pMap[ bFormedID[i] ] = new CMapWorldServer;
 			g_pMap[ bFormedID[i] ]->Create( bFormedID[i] + 10000 );
 		
 			g_dwCurLandNum++;

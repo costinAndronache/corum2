@@ -11,6 +11,8 @@
 #include "WorldUserTable.h"
 
 #include "DebugLog.h"
+#include <algorithm>
+
 extern CDebugLog g_GuildWarLog;
 
 extern bool MoveToPrevDungeon( CWorldUser *pUser, const WORD wNowStadiumID, const bool bIsGMCClear);//기본적으로 플레이어다
