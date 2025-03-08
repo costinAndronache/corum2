@@ -1,7 +1,8 @@
 #pragma once
 
 #define NEW_COMMAND
-
+#include "no_sal2.h"
+#define _CRT_SECURE_NO_WARNINGS
 
 // Windows Header Files:
 #include <windows.h>
@@ -19,7 +20,6 @@
 #include <string.h>
 #include <basetsd.h>
 #include <ddraw.h>
-#include <dmusici.h>
 #include <TIME.H>
 #include <ASSERT.H>
 

@@ -52,7 +52,7 @@ enum eGRAPHIC_CARD_OPTION SpecGraphicCard()
 	case ATI_VENTDER_ID:
 		for (i = 0; i < 10; i++)
 		{ // 숫자가 나오면 무조건 검사한다. 
-			itoa(i, szBuf, 10);
+			_itoa(i, szBuf, 10);
 			pString = strstr(Adapter.Description, szBuf);
 
 			if (!pString)

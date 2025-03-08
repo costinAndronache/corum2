@@ -1,9 +1,12 @@
-// stdafx.h : ÀÚÁÖ »ç¿ëÇÏÁö¸¸ ÀÚÁÖ º¯°æµÇÁö´Â ¾Ê´Â
-// Ç¥ÁØ ½Ã½ºÅÛ Æ÷ÇÔ ÆÄÀÏ ¹× ÇÁ·ÎÁ§Æ® °ü·Ã Æ÷ÇÔ ÆÄÀÏÀÌ 
-// µé¾î ÀÖ´Â Æ÷ÇÔ ÆÄÀÏÀÔ´Ï´Ù.
+// stdafx.h : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½
+// Ç¥ï¿½ï¿½ ï¿½Ã½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+// ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
 //
 
 #pragma once
+
+#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 
 #if _MSC_VER <= 1200
 #pragma warning (disable: 4786)
@@ -36,11 +39,11 @@
 //#   define USE_GC GC
 //#endif
 
-// TODO: ÇÁ·Î±×·¥¿¡ ÇÊ¿äÇÑ Ãß°¡ Çì´õ´Â ¿©±â¿¡¼­ ÂüÁ¶ÇÕ´Ï´Ù.
+// TODO: ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 #include <windows.h>
 #include <ShellApi.h>
 #include <stdio.h>
-#include <stdlib.h>				// _tsplitpath °¡ Á¤ÀÇ
+#include <stdlib.h>				// _tsplitpath ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 #include <tchar.h>
 
 #include <assert.h>
@@ -56,5 +59,5 @@
 //#endif
 
 #include <BaseLibrary/Utility/Macro/CommonMacros.h>
-#include <BaseLibrary/Utility/Macro/DebugMacros.h>		// #pragma todo() ¸¦ »ç¿ëÇÏ±â À§ÇØ Á¤ÀÇ
+#include <BaseLibrary/Utility/Macro/DebugMacros.h>		// #pragma todo() ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 #include <BaseLibrary/Utility/Debugging/BaseLog.h>

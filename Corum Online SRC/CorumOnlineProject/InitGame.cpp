@@ -104,9 +104,9 @@ HMODULE						g_hExecutiveHandle		= NULL;
 HMODULE						g_hBaseNetworkHandle	= NULL;
 HCURSOR						g_hCursor[__MAX_MOUSE_POINTER__];
 
-DUNGEONPRODUCTIONITEMMINMAX	g_DungeonProductionItemMinMax[DUNGEON_PROPERTY_MAX];
-NPC_TABLE					g_NPCTable[MAX_NPC_NUM_PER_VILLAGE];
-BASE_CLASS_INFO				g_sBaseClassInfo[5];
+DUNGEONPRODUCTIONITEMMINMAX* g_DungeonProductionItemMinMax;
+NPC_TABLE*					g_NPCTable;
+BASE_CLASS_INFO*				g_sBaseClassInfo;
 SSKILL_DPINFO				g_sSkillInfoDP[MAX_SKILL];
 SLEVEL_EXP					g_sLevelExp[MAX_LEVEL+1];
 SLEVEL_EXP					g_sGuardianLevelExp[MAX_LEVEL+1];
@@ -258,15 +258,26 @@ DWORD GetEncryptedVersion(char* szSource)
 void LoadBaseClassInfo()
 {
 	_CHECK_MEMORY();
-	DecodeCDBData(GetFile("baseclassinfo.cdb", DATA_TYPE_MANAGER), g_sBaseClassInfo);
+	DecodeCDBData(GetFile("baseclassinfo.cdb", DATA_TYPE_MANAGER), (void**)&g_sBaseClassInfo);
 	_CHECK_MEMORY();
 }
 
 void LoadLevelExp()
 {
-	_CHECK_MEMORY();	
-	DecodeCDBData(GetFile("Level.cdb", DATA_TYPE_MANAGER), &g_sLevelExp[1]);
-	DecodeCDBData(GetFile("GuardianLevel.cdb", DATA_TYPE_MANAGER), &g_sGuardianLevelExp[1]);	
+	_CHECK_MEMORY();
+	SLEVEL_EXP* tmpBuffer = NULL;
+	auto copyBytes = [&tmpBuffer](SLEVEL_EXP* dest, DWORD count) {
+		memcpy(dest, tmpBuffer, min(count, MAX_LEVEL));
+		free(tmpBuffer);
+		tmpBuffer = NULL;
+	};
+
+	const auto size = DecodeCDBData(GetFile("Level.cdb", DATA_TYPE_MANAGER), (void**)&tmpBuffer);
+	copyBytes(&g_sLevelExp[1], size);
+
+	const auto sizeGD = DecodeCDBData(GetFile("GuardianLevel.cdb", DATA_TYPE_MANAGER), (void**)&tmpBuffer);
+	copyBytes(&g_sGuardianLevelExp[1], sizeGD);
+
 	_CHECK_MEMORY();
 }
 
@@ -349,7 +360,7 @@ BOOL LoadCDBMessage()
 	if(!g_Emoticon.LoadTextResource(GetFile("emoticon.cdb", DATA_TYPE_MANAGER)))					return FALSE;
 
 	nTotalSize = DecodeCDBData(GetFile("DungeonProductionItemMinMax.cdb", DATA_TYPE_MANAGER)
-		, g_DungeonProductionItemMinMax);
+		, (void**)&g_DungeonProductionItemMinMax);
 	
 	return TRUE;
 }
@@ -420,7 +431,7 @@ void InitializePool()
 	InitializeStaticMemoryPool(g_pPartyBoardPool, sizeof(SPARTY_BOARD), 100, 1000);		
 
 	g_pItemResourcePool = CreateStaticMemoryPool();
-	InitializeStaticMemoryPool( g_pItemResourcePool, sizeof(SITEM_RESOURCE_EX), 2000, 2000);	
+	InitializeStaticMemoryPool( g_pItemResourcePool, sizeof(SITEM_RESOURCE_EX), 3000, 3000);	
 	
 	g_pPartyPool		= CreateStaticMemoryPool();
 	InitializeStaticMemoryPool( g_pPartyPool, sizeof( PARTY_USER ), 100, 100 );
@@ -432,7 +443,7 @@ void InitializePool()
 	InitializeStaticMemoryPool( g_pItemStorePool, sizeof( ITEM_STORE ), 2000, 2000 );
 
 	g_pItemOptionPool	= CreateStaticMemoryPool();
-	InitializeStaticMemoryPool( g_pItemOptionPool, sizeof( ITEM_OPTION ), 700, 700 );
+	InitializeStaticMemoryPool( g_pItemOptionPool, sizeof( ITEM_OPTION ), 1400, 1400 );
 		
 	g_pSkillReosurcePool	= CreateStaticMemoryPool();
 	InitializeStaticMemoryPool(g_pSkillReosurcePool, sizeof(SSKILL_RESOURCE_EX), 200, 200);
@@ -595,6 +606,10 @@ BOOL InitGame()
 	SetListener(&g_Camera.v3Angle);
 	LoadCursorDoIt();
 	InitializePool();
+
+	printf("%p\n", g_pObjDescPool);
+
+
 	InitializeHash();	
 	LoadSkillresourceTable();	
 	LoadItemResourceTable();
@@ -1765,7 +1780,7 @@ int KeyCheck(int nKey)
 
 void LoadSkillresourceTable()
 {
-	for(int i = 0; i < 5; i++)
+	for(int i = 0; i < 10; i++)
 	{
 		g_sSkillListManager.pSkillList[i].pActiveList		= new COnlyList(MAX_SKILL_NODE);
 		g_sSkillListManager.pSkillList[i].pPassiveList		= new COnlyList(MAX_SKILL_NODE);
@@ -1773,8 +1788,7 @@ void LoadSkillresourceTable()
 		g_sSkillListManager.pSkillList[i].pMasteryList		= new COnlyList(MAX_SKILL_NODE);
 	}
 	
-	SSKILL_RESOURCE			sSkillResource[1000];
-	LP_SKILL_RESOURCE_EX	lpSkillResourceEx;
+	SSKILL_RESOURCE* sSkillResource = NULL;
 
 	int	nLeftIndex	= 1;
 	int	nRightIndex	= 1;
@@ -1782,7 +1796,7 @@ void LoadSkillresourceTable()
 	_CHECK_MEMORY();
 	
 	// Item Resource 
-	int nTotalSize	= DecodeCDBData(GetFile("SkillResource.cdb", DATA_TYPE_MANAGER), sSkillResource);
+	int nTotalSize	= DecodeCDBData(GetFile("SkillResource.cdb", DATA_TYPE_MANAGER), (void**)&sSkillResource);
 	int nMaxNode	= nTotalSize / sizeof(SSKILL_RESOURCE);		
 
 	_CHECK_MEMORY();
@@ -1791,7 +1805,7 @@ void LoadSkillresourceTable()
 
 	for(int i = 0; i < nMaxNode; i++)
 	{		
-		lpSkillResourceEx = (LP_SKILL_RESOURCE_EX)LALAlloc(g_pSkillReosurcePool); 
+		auto lpSkillResourceEx = (LP_SKILL_RESOURCE_EX)LALAlloc(g_pSkillReosurcePool); 
 
 		memset(lpSkillResourceEx->szFileName, 0, sizeof(lpSkillResourceEx->szFileName));
 		memset(lpSkillResourceEx->szFileNameAct, 0, sizeof(lpSkillResourceEx->szFileNameAct));
@@ -1841,23 +1855,20 @@ void LoadSkillresourceTable()
 
 void LoadItemResourceTable()
 {
-	SITEM_RESOURCE		sItemResource[2000];
-	ITEM_STORE			sItemStore[2000];
-	ITEM_OPTION			sItemOption[2000];	
-	LP_ITEM_RESOURCE_EX	lpItemResource=0;	
-	LP_ITEM_STORE		lpItemStore=0;
-	LP_ITEM_OPTION		lpItemOption=0;
+	SITEM_RESOURCE* sItemResource = NULL;
+	ITEM_STORE* sItemStore = NULL;
+	ITEM_OPTION* sItemOption = NULL;
 	
 	_CHECK_MEMORY();
 
 	// Item Resource //
-	int nTotalSize = DecodeCDBData(GetFile("ItemResource.cdb", DATA_TYPE_MANAGER), sItemResource);
+	int nTotalSize = DecodeCDBData(GetFile("ItemResource.cdb", DATA_TYPE_MANAGER), (void**)& sItemResource);
 	int nMaxNode = nTotalSize / sizeof(SITEM_RESOURCE);	
 	_CHECK_MEMORY();
 
 	for(int i = 0; i < nMaxNode; i++)
 	{
-		lpItemResource = (LP_ITEM_RESOURCE_EX)LALAlloc(g_pItemResourcePool);
+		auto lpItemResource = (LP_ITEM_RESOURCE_EX)LALAlloc(g_pItemResourcePool);
 
 		if(lpItemResource == NULL)
 			MessageBox(g_hMainWnd, "Item Resource Pool = NULL", "CorumOnline", MB_OK);
@@ -1898,8 +1909,8 @@ void LoadItemResourceTable()
 		if(!lpItemResource->pSpr)
 		{
 			char szTemp[0xff] = {0,};
-			wsprintf(szTemp, "file not found : %s", lpItemResource->szIconFileName);
-			MessageBox(g_hMainWnd, szTemp, "CorumOnline Error", MB_OK);
+			wsprintf(szTemp, "file not found : %s\n", lpItemResource->szIconFileName);
+			printf("%s", szTemp);
 		}
 					
 		g_pItemResourceHash->Insert(lpItemResource, lpItemResource->wID);		
@@ -1908,13 +1919,13 @@ void LoadItemResourceTable()
 	_CHECK_MEMORY();
 	
 	// Item Store //
-	nTotalSize = DecodeCDBData(GetFile("ItemStore.cdb", DATA_TYPE_MANAGER), sItemStore);
+	nTotalSize = DecodeCDBData(GetFile("ItemStore.cdb", DATA_TYPE_MANAGER), (void**)&sItemStore);
 	nMaxNode = nTotalSize / sizeof(ITEM_STORE);	
 	_CHECK_MEMORY();
 
 	for(int i = 0; i < nMaxNode; i++)
 	{		
-		lpItemStore = (LP_ITEM_STORE)LALAlloc(g_pItemStorePool);
+		auto lpItemStore = (LP_ITEM_STORE)LALAlloc(g_pItemStorePool);
 
 		if(lpItemStore == NULL)
 			MessageBox(g_hMainWnd, "Item Store Pool = NULL", "CorumOnline", MB_OK);
@@ -1928,16 +1939,17 @@ void LoadItemResourceTable()
 	_CHECK_MEMORY();
 	
 	// Item Option //
-	nTotalSize = DecodeCDBData(GetFile("ItemOption.cdb", DATA_TYPE_MANAGER), sItemOption);
+	nTotalSize = DecodeCDBData(GetFile("ItemOption.cdb", DATA_TYPE_MANAGER), (void**)&sItemOption);
 	nMaxNode = nTotalSize / sizeof(ITEM_OPTION);	
 	_CHECK_MEMORY();
 
 	for(int i = 0; i < nMaxNode; i++)
 	{		
-		lpItemOption = (LP_ITEM_OPTION)LALAlloc(g_pItemOptionPool);
+		auto lpItemOption = (LP_ITEM_OPTION)LALAlloc(g_pItemOptionPool);
 
-		if(lpItemOption==NULL)
+		if (lpItemOption == NULL) {
 			MessageBox(g_hMainWnd, "Item Option Pool = NULL", "CorumOnline", MB_OK);
+		}
 		
 		memset(lpItemOption, 0, sizeof(ITEM_OPTION));
 		memcpy(lpItemOption, &sItemOption[i], sizeof(ITEM_OPTION));
@@ -1948,16 +1960,15 @@ void LoadItemResourceTable()
 
 void LoadHelpInfo()
 {
-	SHELP_INFO		sInfo[__MAX_INTERFACE_MESSAGE];
-	LP_HELP_INFO	lpHelpInfo=0;
+	SHELP_INFO*		sInfo;
 
-	int nTotalSize = DecodeCDBData(GetFile("HelpInfo.cdb", DATA_TYPE_MANAGER), sInfo);
+	int nTotalSize = DecodeCDBData(GetFile("HelpInfo.cdb", DATA_TYPE_MANAGER), (void**)&sInfo);
 	int nMaxNode = nTotalSize / sizeof(SHELP_INFO);	
 	
 	// 키 설정 데이터 //
 	for(int i = 0; i < nMaxNode; i++)
 	{	
-		lpHelpInfo = (LP_HELP_INFO)LALAlloc(g_pHelpInfoPool);
+		auto lpHelpInfo = (LP_HELP_INFO)LALAlloc(g_pHelpInfoPool);
 		memset(lpHelpInfo->szText, 0, sizeof(lpHelpInfo->szText));
 		__lstrcpyn(lpHelpInfo->szText, sInfo[i].szText, lstrlen(sInfo[i].szText));
 		lpHelpInfo->wId		= sInfo[i].wId;
@@ -1971,12 +1982,12 @@ void LoadHelpInfo()
 
 void LoadGroupInfo()
 {
-	SGROUP_INFO			sInfo[0xff];
+	SGROUP_INFO*			sInfo;
 	LP_GROUPINFO_TABLE	lpGroupInfo=0;
 	LP_GROUPINFO_TABLE	lpGroupInfoTable=0;
 
 	_CHECK_MEMORY();
-	int nTotalSize = DecodeCDBData(GetFile("GroupInfo.cdb", DATA_TYPE_MANAGER), sInfo);
+	int nTotalSize = DecodeCDBData(GetFile("GroupInfo.cdb", DATA_TYPE_MANAGER), (void**)&sInfo);
 	int nMaxNode = nTotalSize / sizeof(SGROUP_INFO);	
 	_CHECK_MEMORY();
 	
@@ -2020,7 +2031,7 @@ void LoadGroupInfo()
 void LoadKeyInfo()
 {
 	// Key Info //
-	SKEYINFO	szInfo[100];
+	SKEYINFO*	szInfo;
 	char		szKeyOtherInfo[10][128] =
 	{
 		"", "", "Insert", "Page Up", "Home, Mouse Wheel up",	// MSG_ID : 448 ; 마우스 왼쪽 버튼, 449 마우스 오른쪽 버튼
@@ -2030,7 +2041,7 @@ void LoadKeyInfo()
 	__lstrcpyn(szKeyOtherInfo[0], g_Message[ETC_MESSAGE448].szMessage, sizeof(g_Message[ETC_MESSAGE448].szMessage));
 	__lstrcpyn(szKeyOtherInfo[0], g_Message[ETC_MESSAGE449].szMessage, sizeof(g_Message[ETC_MESSAGE449].szMessage));
 		
-	int nTotalSize = DecodeCDBData(GetFile("KeyInfo.cdb", DATA_TYPE_MANAGER), szInfo);
+	int nTotalSize = DecodeCDBData(GetFile("KeyInfo.cdb", DATA_TYPE_MANAGER), (void**)&szInfo);
 	int nMaxNode = nTotalSize / sizeof(SKEYINFO);	
 	
 	// 키 설정 데이터 //
@@ -2045,16 +2056,16 @@ void LoadKeyInfo()
 
 void LoadCPTable()
 {
-	DecodeCDBData(GetFile("cptable.cdb", DATA_TYPE_MANAGER), g_pCPTable);
+	DecodeCDBData(GetFile("cptable.cdb", DATA_TYPE_MANAGER), (void**)&g_pCPTable);
 }
 
 void LoadPreLoadInfo()
 {
 	char szInfo[0xff] = {0, };
 	
-	PRE_LOAD sPreLoadInfo[500];
+	PRE_LOAD* sPreLoadInfo;
 
-	int nTotalSize = DecodeCDBData(GetFile("PreLoad.cdb", DATA_TYPE_MANAGER), sPreLoadInfo);	
+	int nTotalSize = DecodeCDBData(GetFile("PreLoad.cdb", DATA_TYPE_MANAGER), (void**)&sPreLoadInfo);	
 	int nMaxNode = nTotalSize / sizeof(PRE_LOAD);
 
 	for(int i = 0; i < nMaxNode; i++)
@@ -2093,44 +2104,27 @@ void LoadPreLoadInfo()
 void LoadBaseItemTable()
 {
 	CBaseItem*					pBaseItem = NULL;
-	BASEITEM_WEAPONEX			sWeaponItem[700];
-	BASEITEM_ARMOREX			sArmorItem[900];	
-	BASEITEM_SUPPLIESEX			sSuppliesItem[500];
-	BASEITEM_ZODIACEX			sZodiacItem[500];
-	BASEITEM_RIDEEX				sRideItem[10];
-	BASEITEM_SPECIALEX			sSpecialItem[500];
-	BASEITEM_GUARDIANEX			sGuardianItem[500];
-	BASEITEM_MAGICARRAYEX		sMagicArrayItem[500];
-	BASEITEM_MATERIALSEX		sMaterials[500];
-	BASEITEM_MIX_UPGRADEEX		sMixUpgrade[500];
-	BASEITEM_MAGICFIELD_ARRAYEX sMagicFieldArray[500];
-	BASEITEM_CONSUMABLEEX		sCunsumableItem[1000];	
-	BASEITEM_UPGRADEEX			sUpGradeItem[50];
-	BASEITEM_LIQUIDEX			sLiQuidItem[50];
-	BASEITEM_EDITIONEX			sEditionItem[50];
-	BASEITEM_BAGEX				sBagItem[50];
-
-	memset(sWeaponItem,			0, sizeof(sWeaponItem));
-	memset(sArmorItem,			0, sizeof(sArmorItem));
-	memset(sSuppliesItem,		0, sizeof(sSuppliesItem));
-	memset(sRideItem,			0, sizeof(sRideItem));
-	memset(sSpecialItem,		0, sizeof(sSpecialItem));
-	memset(sZodiacItem,			0, sizeof(sZodiacItem));
-	memset(sGuardianItem,		0, sizeof(sGuardianItem));	
-	memset(sMagicArrayItem,		0, sizeof(sMagicArrayItem));				
-	memset(sMaterials,			0, sizeof(sMaterials));				
-	memset(sMixUpgrade,			0, sizeof(sMixUpgrade));
-	memset(sMagicFieldArray,	0, sizeof(sMagicFieldArray));
-	memset(sCunsumableItem,		0, sizeof(sCunsumableItem));
-	memset(sUpGradeItem,		0, sizeof(sUpGradeItem));
-	memset(sLiQuidItem,			0, sizeof(sLiQuidItem));
-	memset(sEditionItem,		0, sizeof(sEditionItem));	
-	memset(sBagItem,			0, sizeof(sBagItem));	
+	BASEITEM_WEAPONEX*			sWeaponItem = nullptr;
+	BASEITEM_ARMOREX*			sArmorItem = nullptr;	
+	BASEITEM_SUPPLIESEX*			sSuppliesItem = nullptr;
+	BASEITEM_ZODIACEX*			sZodiacItem = nullptr;
+	BASEITEM_RIDEEX*				sRideItem = nullptr;
+	BASEITEM_SPECIALEX*			sSpecialItem = nullptr;
+	BASEITEM_GUARDIANEX*			sGuardianItem =  nullptr;
+	BASEITEM_MAGICARRAYEX*		sMagicArrayItem = nullptr;
+	BASEITEM_MATERIALSEX*	sMaterials = nullptr;
+	BASEITEM_MIX_UPGRADEEX*		sMixUpgrade = nullptr;
+	BASEITEM_MAGICFIELD_ARRAYEX* sMagicFieldArray = nullptr;
+	BASEITEM_CONSUMABLEEX*		sCunsumableItem = nullptr;	
+	BASEITEM_UPGRADEEX*			sUpGradeItem = nullptr;
+	BASEITEM_LIQUIDEX*			sLiQuidItem = nullptr;
+	BASEITEM_EDITIONEX*			sEditionItem = nullptr;
+	BASEITEM_BAGEX*				sBagItem = nullptr;
 
 	DWORD dwDefaultSize = sizeof(COMMONBASEITEM);
 	
 	// Weapon 
-	int nTotalSize	= DecodeCDBData(GetFile("ItemWeapon.cdb", DATA_TYPE_MANAGER), sWeaponItem);
+	int nTotalSize	= DecodeCDBData(GetFile("ItemWeapon.cdb", DATA_TYPE_MANAGER), (void**)&sWeaponItem);
 	int nSize		= sizeof(BASEITEM_WEAPON) + dwDefaultSize;
 	int nMaxNode = nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2142,7 +2136,7 @@ void LoadBaseItemTable()
 	}
 	
 	// Armor 
-	nTotalSize	= DecodeCDBData(GetFile("ItemArmor.cdb", DATA_TYPE_MANAGER), sArmorItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemArmor.cdb", DATA_TYPE_MANAGER), (void**)&sArmorItem);
 	nSize		= sizeof(BASEITEM_ARMOR) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2154,7 +2148,7 @@ void LoadBaseItemTable()
 	}
 
 	// Supplies
-	nTotalSize	= DecodeCDBData(GetFile("ItemSupplies.cdb", DATA_TYPE_MANAGER), sSuppliesItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemSupplies.cdb", DATA_TYPE_MANAGER), (void**)&sSuppliesItem);
 	nSize		= sizeof(BASEITEM_SUPPLIES) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2166,7 +2160,7 @@ void LoadBaseItemTable()
 	}	
 
 	// Ride
-	nTotalSize	= DecodeCDBData(GetFile("ItemRide.cdb", DATA_TYPE_MANAGER), sRideItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemRide.cdb", DATA_TYPE_MANAGER), (void**)&sRideItem);
 	nSize		= sizeof(BASEITEM_RIDE) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2178,7 +2172,7 @@ void LoadBaseItemTable()
 	}	
 
 	// Special	
-	nTotalSize	= DecodeCDBData(GetFile("ItemSpecial.cdb", DATA_TYPE_MANAGER), sSpecialItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemSpecial.cdb", DATA_TYPE_MANAGER), (void**)&sSpecialItem);
 	nSize		= sizeof(BASEITEM_SPECIAL) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2190,7 +2184,7 @@ void LoadBaseItemTable()
 	}	
 
 	// Zodiac 
-	nTotalSize	= DecodeCDBData(GetFile("ItemZodiac.cdb", DATA_TYPE_MANAGER), sZodiacItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemZodiac.cdb", DATA_TYPE_MANAGER), (void**)&sZodiacItem);
 	nSize		= sizeof(BASEITEM_ZODIAC) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2202,7 +2196,7 @@ void LoadBaseItemTable()
 	}	
 
 	// Guardian	
-	nTotalSize	= DecodeCDBData(GetFile("ItemGuardian.cdb", DATA_TYPE_MANAGER), sGuardianItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemGuardian.cdb", DATA_TYPE_MANAGER), (void**)&sGuardianItem);
 	nSize		= sizeof(BASEITEM_GUARDIAN) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2214,7 +2208,7 @@ void LoadBaseItemTable()
 	}	
 
 	// MagicArray
-	nTotalSize	= DecodeCDBData(GetFile("ItemMagicArray.cdb", DATA_TYPE_MANAGER), sMagicArrayItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemMagicArray.cdb", DATA_TYPE_MANAGER), (void**)&sMagicArrayItem);
 	nSize		= sizeof(BASEITEM_MAGICARRAY) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2226,7 +2220,7 @@ void LoadBaseItemTable()
 	}	
 
 	// Material
-	nTotalSize	= DecodeCDBData(GetFile("ItemMaterials.cdb", DATA_TYPE_MANAGER), sMaterials);
+	nTotalSize	= DecodeCDBData(GetFile("ItemMaterials.cdb", DATA_TYPE_MANAGER), (void**)&sMaterials);
 	nSize		= sizeof(BASEITEM_MATERIALS) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2238,7 +2232,7 @@ void LoadBaseItemTable()
 	}	
 
 	// MixUpgrade 
-	nTotalSize	= DecodeCDBData(GetFile("ItemMixUpgrade.cdb", DATA_TYPE_MANAGER), sMixUpgrade);
+	nTotalSize	= DecodeCDBData(GetFile("ItemMixUpgrade.cdb", DATA_TYPE_MANAGER), (void**)&sMixUpgrade);
 	nSize		= sizeof(BASEITEM_MIX_UPGRADE) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2250,7 +2244,7 @@ void LoadBaseItemTable()
 	}	
 
 	// MagicFieldArray
-	nTotalSize	= DecodeCDBData(GetFile("ItemMagicFieldArray.cdb", DATA_TYPE_MANAGER), sMagicFieldArray);
+	nTotalSize	= DecodeCDBData(GetFile("ItemMagicFieldArray.cdb", DATA_TYPE_MANAGER), (void**)&sMagicFieldArray);
 	nSize		= sizeof(BASEITEM_MAGICFIELD_ARRAY) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2262,7 +2256,7 @@ void LoadBaseItemTable()
 	}	
 
 	// Consumable
-	nTotalSize	= DecodeCDBData(GetFile("ItemConsumable.cdb", DATA_TYPE_MANAGER), sCunsumableItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemConsumable.cdb", DATA_TYPE_MANAGER), (void**)&sCunsumableItem);
 	nSize		= sizeof(BASEITEM_CONSUMABLE) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2274,7 +2268,7 @@ void LoadBaseItemTable()
 	}	
 
 	// Upgrade 
-	nTotalSize	= DecodeCDBData(GetFile("ItemUpgrade.cdb",DATA_TYPE_MANAGER), sUpGradeItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemUpgrade.cdb",DATA_TYPE_MANAGER), (void**)&sUpGradeItem);
 	nSize		= sizeof(BASEITEM_UPGRADE) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2286,7 +2280,7 @@ void LoadBaseItemTable()
 	}	
 
 	// liquid 
-	nTotalSize	= DecodeCDBData(GetFile("Itemliquid.cdb",DATA_TYPE_MANAGER), sLiQuidItem);
+	nTotalSize	= DecodeCDBData(GetFile("Itemliquid.cdb",DATA_TYPE_MANAGER), (void**)&sLiQuidItem);
 	nSize		= sizeof(BASEITEM_LIQUID) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2298,7 +2292,7 @@ void LoadBaseItemTable()
 	}	
 
 	// Edition //
-	nTotalSize	= DecodeCDBData(GetFile("ItemEdition.cdb",DATA_TYPE_MANAGER), sEditionItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemEdition.cdb",DATA_TYPE_MANAGER), (void**)&sEditionItem);
 	nSize		= sizeof(BASEITEM_EDITION) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2310,7 +2304,7 @@ void LoadBaseItemTable()
 	}
 
 	// Bag
-	nTotalSize	= DecodeCDBData(GetFile("ItemBag.cdb", DATA_TYPE_MANAGER), sBagItem);
+	nTotalSize	= DecodeCDBData(GetFile("ItemBag.cdb", DATA_TYPE_MANAGER), (void**)&sBagItem);
 	nSize		= sizeof(BASEITEM_BAG) + dwDefaultSize;
 	nMaxNode	= nTotalSize / nSize;
 	for(int i = 0; i < nMaxNode; i++)
@@ -2326,13 +2320,10 @@ void LoadBaseItemTable()
 
 void LoadItemTable()
 {
-	SET_ITEM_INFO		sSetItemInfo[200];
-	ITEM_MAKING_INFO	sItemMakingInfo[200];	
+	SET_ITEM_INFO*		sSetItemInfo = nullptr;
+	ITEM_MAKING_INFO*	sItemMakingInfo = nullptr;	
 	LPSET_ITEM_INFO		pSetItemInfo	= NULL;
 	LPITEM_MAKING_INFO	pItemMakingInfo = NULL;
-
-	memset(sSetItemInfo, 0, sizeof(sSetItemInfo));
-	memset(sItemMakingInfo, 0, sizeof(sItemMakingInfo));
 
 	g_pExecutive->PreLoadGXObject(GetFile("GuildFlag.chr", DATA_TYPE_ITEM));
 	// sung-han 2005-02-14 길드전 혜택중 길드 깃발
@@ -2344,7 +2335,7 @@ void LoadItemTable()
 	*/
 
 	// SetItemInfo 
-	int nTotalSize  = DecodeCDBData(GetFile("ItemSetInfo.cdb", DATA_TYPE_MANAGER), sSetItemInfo );
+	int nTotalSize  = DecodeCDBData(GetFile("ItemSetInfo.cdb", DATA_TYPE_MANAGER), (void**)&sSetItemInfo );
 	int nMaxNode	= nTotalSize / sizeof( SET_ITEM_INFO );
 
 	for( int i=0; i<nMaxNode; i++ )
@@ -2355,7 +2346,7 @@ void LoadItemTable()
 	}
 
 	//	ItemMakingInfo 
-	nTotalSize	= DecodeCDBData(GetFile("ItemMaking.cdb", DATA_TYPE_MANAGER), sItemMakingInfo );
+	nTotalSize	= DecodeCDBData(GetFile("ItemMaking.cdb", DATA_TYPE_MANAGER), (void**)&sItemMakingInfo );
 	nMaxNode	= nTotalSize / sizeof( ITEM_MAKING_INFO );
 
 	for(int i=0; i<nMaxNode; i++)
@@ -2365,8 +2356,8 @@ void LoadItemTable()
 		g_pItemMakingInfoHash->Insert( pItemMakingInfo,pItemMakingInfo->wID );
 	}
 	
-	nTotalSize = DecodeCDBData(GetFile("itemAttrDefine.cdb", DATA_TYPE_MANAGER), g_pItemAttrLayer->m_ItemAttrDefine);	
-	nTotalSize = DecodeCDBData(GetFile("itemAttrValueList.cdb", DATA_TYPE_MANAGER), g_pItemAttrLayer->m_ItemAttrValueList);
+	nTotalSize = DecodeCDBData(GetFile("itemAttrDefine.cdb", DATA_TYPE_MANAGER), (void**)&g_pItemAttrLayer->m_ItemAttrDefine);
+	nTotalSize = DecodeCDBData(GetFile("itemAttrValueList.cdb", DATA_TYPE_MANAGER), (void**)&g_pItemAttrLayer->m_ItemAttrValueList);
 
 	PreLoadItem();
 }

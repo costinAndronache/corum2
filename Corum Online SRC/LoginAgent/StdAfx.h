@@ -10,7 +10,7 @@
 #define WIN32_LEAN_AND_MEAN
 #define _WIN32_WINNT 0x0500
 
-
+#include  "no_sal2.h"
 #include <afx.h>
 #include <winsock2.h>
 #include <stdio.h>
@@ -41,15 +41,15 @@ extern DWORD MEMBER_DB;
 
 #define QUERY_STRING_SIZE 1024
 
-#pragma warning(disable : 4100)		// »ç¿ëµÇÁö ¾ÊÀº ÇÔ¼ö ÀÎÀÚ °æ°í
-#pragma warning(disable : 4702)		// Á¢±ÙÇÒ¼ö ¾ø´Â ÄÚµå ¿ö´×
+#pragma warning(disable : 4100)		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+#pragma warning(disable : 4702)		// ï¿½ï¿½ï¿½ï¿½ï¿½Ò¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½
 #pragma warning(disable : 4189)
 #pragma warning(disable : 4244)
 
 #include <mmsystem.h>
 #pragma comment (lib, "Winmm.lib")
 
-//·ÎÄÃ ¸Å´ÏÀú Àû¿ë : 050104 hwoarang
+//ï¿½ï¿½ï¿½ï¿½ ï¿½Å´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : 050104 hwoarang
 #include <cassert>
 #include <string>
 using namespace std;

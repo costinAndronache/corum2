@@ -41,8 +41,8 @@ private:
 
 public:
 
-	ITEM_ATTR_DEFINE		m_ItemAttrDefine[MAX_ATTR_DEFINE];
-	ITEM_ATTR_VALUE_LIST	m_ItemAttrValueList[MAX_ATTR_VALUE_LIST];
+	ITEM_ATTR_DEFINE*		m_ItemAttrDefine;
+	ITEM_ATTR_VALUE_LIST*	m_ItemAttrValueList;
 
 	void	QueryItemAttr				();
 	DWORD	GetVirtualCode				(WORD wRealOptionCode, WORD wRealOptionValue);

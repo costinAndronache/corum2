@@ -26,9 +26,10 @@
 #include "NetworkTimeObserver.h"
 #include "ChinaHackToolBlock.h"
 
+int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nShowCmd) {
+	AllocConsole();
+	freopen("CONOUT$", "w", stdout);
 
-int APIENTRY WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd )
-{
 #ifndef DEVELOP_MODE	
 	if(!CheckGlobalEventHandle())
 	{
@@ -53,10 +54,10 @@ int APIENTRY WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdL
 #if IS_KOREA_LOCALIZING()
 	{
 		// ∑Œ±◊¿Œ ∞·¡§ ? ∫ªº∑ : ≥›∏∂∫Ì 
-		if(lstrlen(lpCmdLine))
+		if(lstrlenW(lpCmdLine))
 		{
-			if(!CmdLineProcessForNetMarble(lpCmdLine))
-				return 0;
+			//if(!CmdLineProcessForNetMarble(lpCmdLine))
+			//	return 0;
 
 			if (TRUE == g_NetMarble.bIsTryCorrectLogin)
 			{
@@ -178,6 +179,161 @@ lb_Process:
 	ReleaseGame();
 	return 0L;
 }
+
+//int APIENTRY WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd )
+//{
+//	AllocConsole();
+//	freopen("CONOUT$", "w", stdout);
+//
+//#ifndef DEVELOP_MODE	
+//	if(!CheckGlobalEventHandle())
+//	{
+//		RunAutoPatch();	
+//		return 0;
+//	}
+//
+//	if(IsHackToolUsed())
+//	{
+//		return 0;
+//	}
+//#endif
+//	
+//	int nResult = GetDXVersion();
+//	if(nResult < 0x801)
+//	{
+//		// MSG_ID : 443 ; Direct X 8.1 ¿ÃªÛ πˆ¡Ø¿Ã « ø‰«’¥œ¥Ÿ.
+//		MessageBox(g_hMainWnd,"You must install the latest version of DirectX from 8.1 Version", "CorumOnlineProject", MB_OK);	
+//		return FALSE;
+//	}
+//				
+//#if IS_KOREA_LOCALIZING()
+//	{
+//		// ∑Œ±◊¿Œ ∞·¡§ ? ∫ªº∑ : ≥›∏∂∫Ì 
+//		if(lstrlen(lpCmdLine))
+//		{
+//			if(!CmdLineProcessForNetMarble(lpCmdLine))
+//				return 0;
+//
+//			if (TRUE == g_NetMarble.bIsTryCorrectLogin)
+//			{
+//				g_bExecuteType = EXECUTE_TYPE_NETMARBLE;
+//			}
+//			else
+//			{ 
+//				asm_int3();
+//				return 0;
+//			}		
+//		}
+//	} 
+//#endif
+//
+//
+//
+//
+//#ifdef DEVELOP_MODE
+//	GetCurrentDirectory(_MAX_PATH, g_Dev.szDevIniPath);
+//	lstrcat(g_Dev.szDevIniPath, "\\Dev.ini");
+//#else
+//	if(FindWindow(WINDOW_CLASS_NAME, WINDOW_TITLE_NAME))
+//		return 0;
+//#endif
+//	
+//  	RegisterWindowClass(hInstance);
+//	InitInstance(hInstance, nShowCmd);	
+//
+//#ifdef DEVELOP_MODE
+//	CentreWindow(g_hMainWnd);
+//#endif
+//
+//#ifdef _DEBUG
+//	int	flag = _CRTDBG_ALLOC_MEM_DF |_CRTDBG_LEAK_CHECK_DF;
+//	_CrtSetDbgFlag(flag);
+//#endif	
+//		
+//	if(!InitGame())	return 0;
+//
+//#ifdef __USE_CLIENT_SPEEDHACK_CHECKER
+//	InitializeClietSpeedHackChecker();
+//#endif
+//
+//#ifdef DEVELOP_MODE
+//	g_Dev.bRenderFramePerSec	= FALSE;
+//#endif
+//
+//#ifdef DEVELOP_MODE
+//	CTWS_LOGIN	packet;
+//	if(g_Dev.bBeginType == DEVELOP_START_NORMAL)	goto lb_Normal;
+//
+//	if( !g_pNet->ConnectServer( g_Dev.szWorldIP, g_Dev.wWorldPort, SERVER_INDEX_WORLD ) )	
+//	{
+//		// MSG_ID : 441 ; (Error! Develop Mode Only!) Fail to connect World Server! , 442 ; Connect Fail
+//		MessageBox(g_hMainWnd, g_Message[ETC_MESSAGE441].szMessage, g_Message[ETC_MESSAGE442].szMessage, MB_OK);	
+//		return 0;
+//	}
+//	
+//	packet.dwVersion = g_dwVersion;
+//	__lstrcpyn(packet.szID, g_Dev.szID, MAX_ID_REAL_LENGTH);					
+//	__lstrcpyn(packet.szPassword, g_Dev.szPassword, MAX_PASSWORD_REAL_LENGTH);	
+//	g_pNet->SendMsg((char*)&packet, packet.GetPacketSize(), SERVER_INDEX_WORLD);
+//	goto lb_Process;	
+//#endif
+//
+//#ifdef DEVELOP_MODE
+//lb_Normal:
+//#endif
+//
+//	SetGameStatus(UPDATE_GAME_INTRO);	
+//
+//#ifdef DEVELOP_MODE
+//lb_Process:
+//#endif
+//
+//	if(IsHackToolUsed())
+//	{
+//		g_bIsRunning = FALSE;
+//	}
+//
+//	MSG msg;
+//
+//	while(g_bIsRunning)
+//	{
+//		if(	PeekMessage(&msg, NULL, 0, 0, PM_REMOVE) )
+//		{
+//			TranslateMessage(&msg);
+//			DispatchMessage(&msg);
+//		}
+//		else
+//		{
+//			(*Render[ g_bRenderMode ])();
+//		}
+//
+//#ifdef __USE_CLIENT_SPEEDHACK_CHECKER
+//		if(IsSpeedHackClient()) 
+//		{
+//#if IS_CHINA_LOCALIZING()
+//			MessageBox(NULL, _T("ÀŸ∂»“Ï≥£,«ø÷∆ÕÀ≥ˆ”Œœ∑!"), _T("ÀŸ∂»“Ï≥£!"), MB_OK|MB_ICONWARNING);
+//#else
+//#ifndef DEVELOP_MODE			
+//			MessageBox(NULL, _T("DON'T USE SPEEDHACK!! ErrCode: 1"), _T("SPEEDHACK!"), MB_OK|MB_ICONWARNING);
+//#endif
+//#endif
+//			
+//#ifndef DEVELOP_MODE
+//			break;
+//#endif
+//		}
+//#endif 
+//	}
+//
+///*#if IS_CHINA_LOCALIZING()
+//#ifndef DEVELOP_MODE	
+//	OpenWebSite("http://corum.9you.com");
+//#endif
+//#endif
+//*/
+//	ReleaseGame();
+//	return 0L;
+//}
 
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

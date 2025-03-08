@@ -114,9 +114,9 @@ public:
 
 	BOOL	m_bSetWnd;
 
-	CMenu*	m_pMenu[CUR_INTERFACE];	
+	CMenu*	m_pMenu[CUR_INTERFACE*2];	
 
-	int		m_nSize[CUR_INTERFACE*2];
+	int		m_nSize[CUR_INTERFACE*3];
 
 	char	m_szName[CUR_INTERFACE][0xff];
 	BOOL	LoadInterfaceComponentInfoCDB(char* pFileName);	

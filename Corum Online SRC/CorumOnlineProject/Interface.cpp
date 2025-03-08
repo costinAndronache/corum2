@@ -125,9 +125,9 @@ CInterface::~CInterface()
 //==================================================//
 BOOL CInterface::LoadInterfaceComponentInfoCDB(char* pFileName)
 {
-	INTERFACE_COMPONENT_INFO sInterfaceComponentInfo[MAX_INTERFACE_COMPONENT_INFO];
+	INTERFACE_COMPONENT_INFO* sInterfaceComponentInfo = nullptr;
 	
-	int nTotalSize = DecodeCDBData(GetFile(pFileName, DATA_TYPE_MANAGER), sInterfaceComponentInfo);
+	int nTotalSize = DecodeCDBData(GetFile(pFileName, DATA_TYPE_MANAGER), (void**)&sInterfaceComponentInfo);
 	int nMaxNode = nTotalSize / sizeof(INTERFACE_COMPONENT_INFO);	
 	
 	// 키 설정 데이터 //
@@ -182,14 +182,20 @@ BOOL CInterface::LoadInterfaceComponentInfoCDB(char* pFileName)
 
 BOOL CInterface::LoadInterfaceFrameInfoCDB(char* pFileName)
 {
-	INTERFACE_FRAME_INFO sInterfaceFrameInfo[MAX_INTERFACE_FRAME_INFO];
+	INTERFACE_FRAME_INFO* sInterfaceFrameInfo = nullptr;
 	
-	int nTotalSize = DecodeCDBData(GetFile(pFileName, DATA_TYPE_MANAGER), sInterfaceFrameInfo);
+	int nTotalSize = DecodeCDBData(GetFile(pFileName, DATA_TYPE_MANAGER), (void**)&sInterfaceFrameInfo);
 	int nMaxNode = nTotalSize / sizeof(INTERFACE_FRAME_INFO);	
 	
 	for(int i = 0; i < nMaxNode; i++)
 	{
-		m_pMenu[sInterfaceFrameInfo[i].wFrameID]->CreateMenu(
+		const auto frameID = sInterfaceFrameInfo[i].wFrameID;
+		if (frameID >= CUR_INTERFACE) {
+			continue;
+		}
+
+		auto menu = m_pMenu[frameID];
+		menu->CreateMenu(
 			sInterfaceFrameInfo[i].szFrameName
 			, sInterfaceFrameInfo[i].wWidth
 			, sInterfaceFrameInfo[i].wHeight

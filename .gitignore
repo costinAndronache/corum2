@@ -5,3 +5,8 @@ Debug
 _UpgradeReport_Files
 *.pak
 .vs
+Corum Online SRC/Installed Client
+*.tlog
+*.ilk
+*.log
+*.exe

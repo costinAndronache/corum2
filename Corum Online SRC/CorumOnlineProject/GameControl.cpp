@@ -66,7 +66,7 @@ MouseState			g_Mouse;
 CAMERA_INFO			g_Camera;
 KEY_PRESS_STATE		g_KeyPress;
 GXMAP_HANDLE		g_pMapHandle = NULL;
-CPTable				g_pCPTable[MAX_CP_TABLE];
+CPTable*				g_pCPTable;
 HELP_LOAD_SPRITE	g_helpLoadingSprite;
 FOG_DESC			g_FogDesc;
 NETMARBLE_LOGIN		g_NetMarble;
@@ -300,7 +300,7 @@ void CaptureScreen()
 			const char szScreenShotFolder[] = "/MyScreenshot";
 			sprintf(szTargetFolder,"%s%s",g_szBasePath,szScreenShotFolder);
 			
-			mkdir(szTargetFolder);
+			_mkdir(szTargetFolder);
 			::sprintf( szFileName, "%s/Save %04d-%02d-%02d %02d-%02d(%d).tga", //2002 09 25 11 15
 				szTargetFolder,
 				time.wYear,
@@ -823,10 +823,9 @@ void CreateConvertCDBToMAP(char* pszFileName)
 {
 	// cdb -> map 파일 생성.	
 	// 미리 길이를 알 수 있는 방법이나 그런 게 없을까? 일단 100K로 세팅.
-	char* szTempBuf = new char[102400];
-	ZeroMemory(szTempBuf, 102400);
+	char* szTempBuf = NULL;
 
-	DWORD dwTotalRead = DecodeCDBData( pszFileName, szTempBuf, DECODE_KEY, DECODE_SUBKEY);
+	DWORD dwTotalRead = DecodeCDBData( pszFileName, (void**)&szTempBuf, DECODE_KEY, DECODE_SUBKEY);
 	pszFileName[lstrlen(pszFileName)-3]='m';
 	pszFileName[lstrlen(pszFileName)-2]='a';
 	pszFileName[lstrlen(pszFileName)-1]='p';
@@ -2366,7 +2365,7 @@ void DeleteHandleObject( GXOBJECT_HANDLE hHandle )
 }
 
 
-DWORD DecodeCDBData(char* szLoadFile,  void* pReturnValue, char* szDecodeKey, int nDecodeSubKey)
+DWORD DecodeCDBData(char* szLoadFile,  void** pReturnValue, char* szDecodeKey, int nDecodeSubKey)
 {
 	int nKeyLen = lstrlen(szDecodeKey);
 
@@ -2399,7 +2398,8 @@ DWORD DecodeCDBData(char* szLoadFile,  void* pReturnValue, char* szDecodeKey, in
 		dwCur += nRemain;
 	}
 	
-	memcpy(pReturnValue, szBuffer, dwTotalLen);
+	*pReturnValue = malloc(dwTotalLen);
+	memcpy(*pReturnValue, szBuffer, dwTotalLen);
 	delete [] szBuffer;
 	fclose(fp);
 

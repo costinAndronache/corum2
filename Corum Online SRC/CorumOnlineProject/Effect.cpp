@@ -33,12 +33,16 @@ void EffectLayer::Init(BOOL bChk)
 
 void EffectLayer::LoadScript(BOOL bChk)
 {
+	const auto ptr = g_pObjDescPool;
 	// 스킬 데이터를 로드한다.
 	Load(GetFile("skill.cdb", DATA_TYPE_MANAGER));
 	
 	char temp[100]={0,}; 
 	for(DWORD i = 0; i < MAX_SKILL_COUNT; ++i)
 	{
+		if (ptr != g_pObjDescPool || i == 169) {
+			printf("here!");
+		}
 		m_nEffectSize[i] = (BYTE)lstrlen(m_Effect[i].szName);		
 		
 		if(bChk)
@@ -51,8 +55,11 @@ void EffectLayer::LoadScript(BOOL bChk)
 			
 			if (m_Effect[i].dwStatusResourceID)
 			{
-				lstrcpy(temp, g_pObjManager->GetFile( m_Effect[i].dwStatusResourceID));
-				g_pExecutive->PreLoadGXObject( temp );
+				char* const effectFile = g_pObjManager->GetFile(m_Effect[i].dwStatusResourceID);
+				if (effectFile) {
+					lstrcpy(temp, effectFile);
+					g_pExecutive->PreLoadGXObject(temp);
+				}
 			}
 		}
 
@@ -153,9 +160,9 @@ void EffectLayer::LoadScript(BOOL bChk)
 
 DWORD EffectLayer::Load(char *szFileName)
 {
-	BASESKILL baseskill[MAX_SKILL_COUNT];	memset(baseskill, 0, sizeof(baseskill));
+	BASESKILL* baseskill;
 	
-	int nTotalSize = DecodeCDBData(szFileName, baseskill);
+	int nTotalSize = DecodeCDBData(szFileName, (void**)& baseskill);
 	int m_nMaxNode = nTotalSize / sizeof(BASESKILL);
 	
 	for(int i=0; i<m_nMaxNode; i++ )

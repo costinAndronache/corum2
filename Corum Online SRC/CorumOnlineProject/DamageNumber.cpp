@@ -28,7 +28,9 @@ void	InitDamageNumber()
 				g_pDamageNumberPool[0].pDamageNumberPool[j].m_hDamageNumber[k][l].pHandle = 
 					CreateHandleObject( GetFile( szBuf, DATA_TYPE_DAMAGENUMBER ), GXPlayerPROC, g_pDamageNumberPool[0].pDamageNumberPool[j].m_hDamageNumber[k][l].pDesc, GXOBJECT_CREATE_TYPE_EFFECT );						
 				
-				if( !g_pDamageNumberPool[0].pDamageNumberPool[j].m_hDamageNumber[k][l].pHandle ) asm_int3();
+				if (!g_pDamageNumberPool[0].pDamageNumberPool[j].m_hDamageNumber[k][l].pHandle) {
+					asm_int3();
+				}
 				HideObject( g_pDamageNumberPool[0].pDamageNumberPool[j].m_hDamageNumber[k][l].pHandle );
 			}
 		}

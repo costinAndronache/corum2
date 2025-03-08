@@ -127,7 +127,7 @@ BOOL IsProperNativeOs()
 	if(GetACP() != uCodePage) return FALSE;
 
 	char szCodePage[0xff];
-	itoa(uCodePage, szCodePage, 10);
+	_itoa(uCodePage, szCodePage, 10);
 
 	char szLCData[0xff];
 	LCID localeid = GetSystemDefaultLCID();

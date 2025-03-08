@@ -3,6 +3,7 @@
 
 #pragma once
 
+#define _CRT_SECURE_NO_WARNINGS
 
 // 다국어 지원을 위해 인라인 문자열 비교함수를 제공한다
 // by deepdark.

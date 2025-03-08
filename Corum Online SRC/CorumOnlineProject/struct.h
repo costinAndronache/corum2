@@ -432,7 +432,7 @@ typedef struct __tag_skill_list__
 
 typedef struct __tag_skill_list_manager__
 {
-	SSKILL_LIST	pSkillList[5];
+	SSKILL_LIST	pSkillList[10];
 
 	BYTE byLeftSkillCnt;
 	BYTE byRightSkillCnt;
@@ -622,7 +622,7 @@ struct CPTable	// 써버랑 클라이언트랑 구조체가 틀리다. 주의해라.
 };
 
 
-extern CPTable	g_pCPTable[MAX_CP_TABLE];
+extern CPTable*	g_pCPTable;
 
 
 struct NPC_TABLE
@@ -633,7 +633,7 @@ struct NPC_TABLE
 	char  szMsg[ 3 ][ MAX_NPC_MSG_LENGTH ];
 };
 
-extern NPC_TABLE g_NPCTable[MAX_NPC_NUM_PER_VILLAGE];
+extern NPC_TABLE* g_NPCTable;
 
 
 #pragma pack(pop)
