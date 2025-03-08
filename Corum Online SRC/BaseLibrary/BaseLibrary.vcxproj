@@ -170,6 +170,9 @@
     <Lib>
       <OutputFile>$(OutDir)BaseLibrary.lib</OutputFile>
     </Lib>
+    <PostBuildEvent>
+      <Command>..\..\scripts\postBuildCentraliseOutput_BaseLibrary.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

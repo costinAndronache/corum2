@@ -76,18 +76,21 @@
 #	endif
 
 #else
-#	define DEFAULT_GAME_DB					"Corum"
-#	define DEFAULT_GAME_DB_ACCOUNT			"GameSrv"
-#	define DEFAULT_GAME_DB_PASSWORD			"vhrwnQkdqhdxn!"
-#	define DEFAULT_TOTAL_DB					"Total_DB"
-#	define DEFAULT_TOTAL_DB_ACCOUNT			"GameSrv"
-#	define DEFAULT_TOTAL_DB_PASSWORD		"vhrwnQkdqhdxn!"
-#	define DEFAULT_MEMBER_DB				"Member"
-#	define DEFAULT_MEMBER_DB_ACCOUNT		"GameSrv"
-#	define DEFAULT_MEMBER_DB_PASSWORD		"vhrwnQkdqhdxn!"
-#	define DEFAULT_LOG_DB					"Total_DB"
-#	define DEFAULT_LOG_DB_ACCOUNT			"GameSrv"
-#	define DEFAULT_LOG_DB_PASSWORD			"vhrwnQkdqhdxn!"
+#	define DEFAULT_GAME_DB					"Corum_corum2"
+#	define DEFAULT_GAME_DB_ACCOUNT			"potato"
+#	define DEFAULT_GAME_DB_PASSWORD			"ahffk"
+
+#	define DEFAULT_TOTAL_DB					"Total_DB_corum2"
+#	define DEFAULT_TOTAL_DB_ACCOUNT			"potato"
+#	define DEFAULT_TOTAL_DB_PASSWORD		"ahffk"
+
+#	define DEFAULT_MEMBER_DB				"Member_corum2"
+#	define DEFAULT_MEMBER_DB_ACCOUNT		"potato"
+#	define DEFAULT_MEMBER_DB_PASSWORD		"ahffk"
+
+#	define DEFAULT_LOG_DB					"Total_DB_corum2"
+#	define DEFAULT_LOG_DB_ACCOUNT			"potato"
+#	define DEFAULT_LOG_DB_PASSWORD			"ahffk"
 
 #endif
 

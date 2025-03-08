@@ -502,6 +502,7 @@
     <ExternalIncludePath>$(SOLUTION_INCLUDES);$(IncludePath)</ExternalIncludePath>
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
+    <TargetName>CorumOnlineResult</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -521,6 +522,7 @@
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <IgnoreSpecificDefaultLibraries>LIBC.lib;</IgnoreSpecificDefaultLibraries>
       <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
+      <OutputFile>$(OutDir)\CorumOnlineResult.exe</OutputFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

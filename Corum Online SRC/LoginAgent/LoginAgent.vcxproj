@@ -133,6 +133,7 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>LoginAgentResult</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
@@ -223,7 +224,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>WS2_32.lib;odbc32.lib;odbccp32.lib;cpssolib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\Debug\LoginAgent.exe</OutputFile>
+      <OutputFile>.\Debug\LoginAgentResult.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)LoginAgent.pdb</ProgramDatabaseFile>
@@ -243,6 +244,9 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0412</Culture>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>..\..\scripts\postBuildCentraliseOutput_loginAgent.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

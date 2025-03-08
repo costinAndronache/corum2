@@ -10,3 +10,64 @@ Corum Online SRC/Installed Client
 *.ilk
 *.log
 *.exe
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/I4DyuchiNET.lib
+I4DyuchiNET.pdb
+*.DMP
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/DungeonServerResult*.TXT
+I4DyuchiNET.lib
+BaseLibrary.lib
+*.pdb
+CommonServer.dll
+CommonServer.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/SS3DExecutiveForCorum.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/SS3DExecutiveForCorum.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/SS3DFileStorage.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/SS3DFileStorage.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/SS3DGeometryForCorum.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/SS3DGeometryForCorum.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/SS3DGFunc.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/SS3DGFunc.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/SS3DRendererForCorum.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/SS3DRendererForCorum.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/CPSSOLib.h
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/CPSSOLib.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Ludilos/libcomservice2.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/CPSSOLib.h
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/CPSSOLib.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/SS3DExecutiveForCorum.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/SS3DExecutiveForCorum.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/SS3DFileStorage.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/SS3DFileStorage.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/SS3DGeometryForCorum.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/SS3DGeometryForCorum.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/SS3DGFunc.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/SS3DGFunc.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/SS3DRendererForCorum.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/SS3DRendererForCorum.lib
+Corum Online SRC/INNER/3_DungeonServer Configurations_Beyonde/TrafficLog.txt
+Corum Online SRC/INNER/3_DungeonServer Configurations/SS3DGFunc.dll
+Corum Online SRC/INNER/3_DungeonServer Configurations/SS3DGFunc.lib
+Corum Online SRC/INNER/2_WorldServer Configurations/SS3DExecutiveForCorum.dll
+Corum Online SRC/INNER/2_WorldServer Configurations/SS3DExecutiveForCorum.lib
+Corum Online SRC/INNER/2_WorldServer Configurations/SS3DFileStorage.dll
+Corum Online SRC/INNER/2_WorldServer Configurations/SS3DFileStorage.lib
+Corum Online SRC/INNER/2_WorldServer Configurations/SS3DGeometryForCorum.dll
+Corum Online SRC/INNER/2_WorldServer Configurations/SS3DGeometryForCorum.lib
+Corum Online SRC/INNER/2_WorldServer Configurations/SS3DGFunc.dll
+Corum Online SRC/INNER/2_WorldServer Configurations/SS3DGFunc.lib
+Corum Online SRC/INNER/2_WorldServer Configurations/SS3DRendererForCorum.dll
+Corum Online SRC/INNER/2_WorldServer Configurations/SS3DRendererForCorum.lib
+Corum Online SRC/INNER/2_WorldServer Configurations/WorldServer.exe
+Corum Online SRC/INNER/2_WorldServer Configurations/CommonServer.dll
+Corum Online SRC/INNER/2_WorldServer Configurations/CommonServer.lib
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DRendererForCorum.lib
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DRendererForCorum.dll
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DGFunc.lib
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DGFunc.dll
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DGeometryForCorum.lib
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DGeometryForCorum.dll
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DFileStorage.lib
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DFileStorage.dll
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DExecutiveForCorum.lib
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DExecutiveForCorum.dll
+Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SizeReporter.txt
