@@ -2,34 +2,37 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{4401c058-47af-49ab-bf0f-f7000f507995}</UniqueIdentifier>
+      <UniqueIdentifier>{65f12165-375b-4ef8-b7bb-e63e6fa6c7d3}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{ccde4f0e-90cc-4c52-b6d3-7c3f23d04682}</UniqueIdentifier>
+      <UniqueIdentifier>{5b72755d-1a9b-4865-8076-989074f4aa01}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl</Extensions>
     </Filter>
     <Filter Include="Netmarble">
-      <UniqueIdentifier>{0b696c12-7fe9-40b8-bd51-c6cbb6dd3a74}</UniqueIdentifier>
+      <UniqueIdentifier>{8b9cafcd-a626-4c73-9db0-c326bb0878b1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Container">
-      <UniqueIdentifier>{30cce794-9ae4-4240-b7d8-44f93ad81ff0}</UniqueIdentifier>
+      <UniqueIdentifier>{87283f59-7d0e-437b-a20d-af45e51f642c}</UniqueIdentifier>
     </Filter>
     <Filter Include="ChinaBilling">
-      <UniqueIdentifier>{786bece3-565d-4622-979f-a2cf23904c85}</UniqueIdentifier>
+      <UniqueIdentifier>{47ef2ff6-8177-4374-87c6-a67c6197fe7a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Accessory">
-      <UniqueIdentifier>{6165237d-cc23-44c5-a2af-99a34ec67be9}</UniqueIdentifier>
+      <UniqueIdentifier>{a84508e7-d7bc-4260-9b75-c0496e54106e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Licensing">
-      <UniqueIdentifier>{30107096-124d-4227-91c3-232078fbba2a}</UniqueIdentifier>
+      <UniqueIdentifier>{d4eef2cc-a88f-48e9-b465-857cf58121b1}</UniqueIdentifier>
     </Filter>
     <Filter Include="CommonServer">
-      <UniqueIdentifier>{3bcfe520-fc1b-4b0e-b6ca-7c59c39180d5}</UniqueIdentifier>
+      <UniqueIdentifier>{1bd388ab-8bd0-43bb-9457-1daf3af1a7ab}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{7833f16c-c740-4d2f-81a6-f97a64f3e3fa}</UniqueIdentifier>
+      <UniqueIdentifier>{d85cee4b-a85a-4d09-83ab-7b3d6c5f4372}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Local">
+      <UniqueIdentifier>{cfa66b8d-100d-46be-b6a4-e425b941a647}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -40,6 +43,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Filter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemLog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -87,8 +93,17 @@
     <ClCompile Include="LicensingProc.cpp">
       <Filter>Licensing</Filter>
     </ClCompile>
+    <ClCompile Include="LocaMgr.cpp">
+      <Filter>Local</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\CommonServer\AbyssHash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonServer\AbyssHash64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="DBProc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -99,6 +114,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GlobalDefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MsgProc.h">
@@ -158,6 +179,9 @@
     <ClInclude Include="LicensingProc.h">
       <Filter>Licensing</Filter>
     </ClInclude>
+    <ClInclude Include="LocalMgr.h">
+      <Filter>Local</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="CPSSOLib.lib">
@@ -168,12 +192,14 @@
     </Library>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="libcomservice2.dll">
+    <None Include="libcomservice2.dll">
       <Filter>Netmarble</Filter>
-    </CustomBuild>
-    <CustomBuild Include="CommonServer.dll">
+    </None>
+    <None Include="CommonServer.dll">
       <Filter>CommonServer</Filter>
-    </CustomBuild>
-    <CustomBuild Include="ReadMe.txt" />
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
 </Project>

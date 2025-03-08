@@ -676,7 +676,7 @@ void QueryTypeChrSelectInfo(DBRECEIVEDATA* pResult)
 	int		nSize	= sizeof(RS_CharacterLogInfo_Without_Equip);
 	WORD	wIndex	= 0;
 
-	for(i = 0; i < packet.bNum; i++)
+	for(auto i = 0; i < packet.bNum; i++)
 	{
 		wIndex = EnumChar[i].wChrNum;
 
@@ -740,7 +740,7 @@ void QueryTypeChrSelectInfo(DBRECEIVEDATA* pResult)
 		ASTC_ITEMMALL_INFO MallPacket;
 		BYTE byCharNum = 0;
 
-		for(i = 0; i < 4; i++)
+		for(int i = 0; i < 4; i++)
 		{
 			if(pUser->m_EnumChar[i].dwCharacterIndex==0)
 				byCharNum++;
