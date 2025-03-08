@@ -2175,7 +2175,7 @@ WORD CUser::GetSmallItemSumWeight()
 		}
 	}
 
-	for(i = 0; i < MAX_BELT_POOL; i++)
+	for(int i = 0; i < MAX_BELT_POOL; i++)
 	{
 		if(m_pBelt[i].GetID())
 		{

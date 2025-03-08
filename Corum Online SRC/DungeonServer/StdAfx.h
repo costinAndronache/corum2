@@ -7,7 +7,7 @@
 #endif 
 #define WIN32_LEAN_AND_MEAN//windwos 헤더 넣어도 문제 없도록
 
-#define _WIN32_WINNT 0x0500
+#define _WIN32_WINNT 0x0501
 
 
 #include <winsock2.h>

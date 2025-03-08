@@ -581,7 +581,8 @@ void GiveMeExp(CUser* pUser, CMonster* pMonster, DWORD dwExp)
 		fResExp += 0.09f * (dwUserCount - 1);
 
 		// 모든 클래스 참가 추가 경험치
-		for(int iClass=1;iClass<CLASS_TYPE_MAX;iClass++)
+		int iClass = 1;
+		for(iClass=1;iClass<CLASS_TYPE_MAX;iClass++)
 		{
 			// 클래스가 하나라도 없다면
 			if(pClass[iClass] == false)
@@ -1630,7 +1631,8 @@ void SendExchangeGuardianLife(CUser* pMasterUser, int nMinute)
 
 void ExchangeGuardianLife(CItem* pGuardianItem, int nMinute)
 {
-	struct tm when = *localtime((const long*)&pGuardianItem->m_Item_Guardian.dwEndLife);
+	const time_t time = pGuardianItem->m_Item_Guardian.dwEndLife;
+	struct tm when = *localtime(&time);
 	when.tm_min += nMinute;	// 가디언 죽거나, 레벨업에 시간 변동 : 최덕석 2005.1.10
 	pGuardianItem->m_Item_Guardian.dwEndLife = mktime(&when);
 }

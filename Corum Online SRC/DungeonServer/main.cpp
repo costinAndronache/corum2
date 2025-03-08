@@ -233,9 +233,6 @@ int main(int argc, char* argv[])
 
 
 
-	// MiniDump : jaewon 050120
-	g_CExceptionReport.SetProgramName();
-
 	HWND hCombo;
 	srand( timeGetTime() );
 
