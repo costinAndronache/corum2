@@ -2,32 +2,41 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{a146d023-16a2-4ace-b0e1-c73fb9ef3db1}</UniqueIdentifier>
+      <UniqueIdentifier>{e0674a31-f006-4130-88c1-2d0163b28d90}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{670ab70c-1127-495b-b6fc-ea42b7902d3d}</UniqueIdentifier>
+      <UniqueIdentifier>{5496a985-ece0-4b8d-ab2e-a45a5c46cf21}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl</Extensions>
     </Filter>
     <Filter Include="Packet">
-      <UniqueIdentifier>{aa0dd517-9cb7-4ab0-b6e0-ce944cabedac}</UniqueIdentifier>
+      <UniqueIdentifier>{eb6fd884-8bef-42c7-bfe2-9f9fc9c624c2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Common">
-      <UniqueIdentifier>{5fd95446-2407-4539-804c-948aee366492}</UniqueIdentifier>
+      <UniqueIdentifier>{67078966-a5ba-4f00-bdc8-680f4820ddc6}</UniqueIdentifier>
     </Filter>
     <Filter Include="COM Interface">
-      <UniqueIdentifier>{823af7ea-bd44-452b-a267-74a8445f8ad2}</UniqueIdentifier>
+      <UniqueIdentifier>{83b770f3-d580-4338-a743-da88c2c6c08c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Item">
-      <UniqueIdentifier>{76083549-b26c-476b-8d04-9325280ad4d0}</UniqueIdentifier>
+      <UniqueIdentifier>{0ab8dc97-702c-44b3-9b28-a25bf3616e4a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
-      <UniqueIdentifier>{2a47f77e-fb59-4bc7-abb2-29b781d871d3}</UniqueIdentifier>
+      <UniqueIdentifier>{19f963c7-be5f-44fd-b25e-39edc784c8c0}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CommonDungeon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="CommonServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NTAes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NTNetWork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StdAfx.cpp">
@@ -59,10 +68,21 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ResourceCompile Include="CommonServer.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ClassSupport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="ComInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CommonAccessory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDungeon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CommonGlobalDefine.h">
@@ -80,7 +100,34 @@
     <ClInclude Include="CommonServer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HS_HASH.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HS_LIST.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NTAes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NTNetWork.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PartyMatchPacket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STLSupport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TeamMatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TeamMatchHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AgentServerPacket.h">
@@ -187,6 +234,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="ReadMe.txt" />
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
 </Project>

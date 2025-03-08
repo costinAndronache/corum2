@@ -13,7 +13,7 @@ CXlHeadNode::CXlHeadNode(void) : m_pXlCell(NULL)
 CXlHeadNode::CXlHeadNode(LPCXlCell pXlCell) : m_pXlCell(pXlCell)
 {
 	if ( CXlCell::CellType_Number == pXlCell->m_ValueType )
-		::_snprintf(m_Title, CXlHeadNode::MAX_TITLE_LEN, "%d", m_pXlCell->m_Value.dValue);
+		::_snprintf(m_Title, CXlHeadNode::MAX_TITLE_LEN, "%d", (int)m_pXlCell->m_Value.dValue);
 	else
 		::strncpy(m_Title, m_pXlCell->m_Value.pValue, CXlHeadNode::MAX_TITLE_LEN);
 }

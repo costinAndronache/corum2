@@ -112,6 +112,7 @@ void DECLSPECIFIER CreateRandomString(IN OUT char* szString, int iLen)
 	szString[0] = '_';
 	szString[1] = '_';
 
+	int i = 2;
 	for(int i = 2; i < 10; i++)
 	{
 		szString[i] = char('a' + (rand() % 26));
