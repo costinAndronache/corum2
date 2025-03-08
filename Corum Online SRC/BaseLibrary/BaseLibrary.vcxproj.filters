@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pattern">
+      <UniqueIdentifier>{56ba2c5c-6765-4d7e-bb3f-6030162dea26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{10db4d0f-2cef-46db-983b-7b2b4577c21d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{d2026c6e-3156-4bac-b5e2-5e500419a601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\MemoryPool">
+      <UniqueIdentifier>{e2dba3f2-4281-412c-931d-16281d432b50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Script">
+      <UniqueIdentifier>{d64c1240-c349-48fe-b707-2d9ab52f8126}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Macro">
+      <UniqueIdentifier>{105a6ca8-9dcb-4b80-966f-00df61772223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Console">
+      <UniqueIdentifier>{8fd02d28-e574-49f6-9a5a-9ce04ef7b44c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Debugging">
+      <UniqueIdentifier>{b3bae672-e03e-455f-aee2-22abfa135bd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\String">
+      <UniqueIdentifier>{d692011c-1d04-4c82-b49b-2699506e5f22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Time">
+      <UniqueIdentifier>{1f98e618-60e8-4fe2-93ce-ec965990c35b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\ETC">
+      <UniqueIdentifier>{105fb5cd-678b-4f56-8fe0-6094264fd17f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\State">
+      <UniqueIdentifier>{135fa82f-4a5d-4d43-ae3f-5290ab575825}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Configuration">
+      <UniqueIdentifier>{52769ae1-a45f-4f6b-b2e7-567b14e50223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Calculator">
+      <UniqueIdentifier>{28f6c060-92d2-4157-ba47-655d2f7d9848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Security">
+      <UniqueIdentifier>{4164b510-efb5-488a-9788-82f5bf4a1b70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Random">
+      <UniqueIdentifier>{84d65daf-d210-407f-897b-2450cdb3ae3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{51aa47b5-d8f7-4fb0-9780-64070fb0ef99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File\XlReader">
+      <UniqueIdentifier>{8026ff71-d9a7-4ef9-af02-84bdcf175d3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File\XlReader\XlHeadLine">
+      <UniqueIdentifier>{196a26d4-ae53-4bb2-a0b6-cff8585751d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Definition">
+      <UniqueIdentifier>{52815d03-ded9-4b36-955c-d037e713c495}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pattern\FastDelegate.h">
+      <Filter>Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="Pattern\Singleton.hpp">
+      <Filter>Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\Lock.hpp">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\Thread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread\ThreadManager.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\MemoryPool\MemoryPool.hpp">
+      <Filter>Utility\MemoryPool</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Script\Delimiter.h">
+      <Filter>Utility\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Script\ScriptFile.h">
+      <Filter>Utility\Script</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Macro\BaseMath.h">
+      <Filter>Utility\Macro</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Macro\BitField.h">
+      <Filter>Utility\Macro</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Macro\CommonMacros.h">
+      <Filter>Utility\Macro</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Macro\DebugMacros.h">
+      <Filter>Utility\Macro</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Console\SysTray.h">
+      <Filter>Utility\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Debugging\BaseLog.h">
+      <Filter>Utility\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Debugging\BaseLogDefine.h">
+      <Filter>Utility\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Debugging\DebugUtils.h">
+      <Filter>Utility\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Debugging\DLLModule.h">
+      <Filter>Utility\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\debugging\DumpUtil.h">
+      <Filter>Utility\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Debugging\ExceptionReport.h">
+      <Filter>Utility\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Debugging\SystemInfo.h">
+      <Filter>Utility\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\string\CMoneyString.hpp">
+      <Filter>Utility\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\String\CWordSearchBitBinary.h">
+      <Filter>Utility\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\String\CWordSearchSimple.h">
+      <Filter>Utility\String</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\string\ForbidWord.h">
+      <Filter>Utility\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\String\PathString.h">
+      <Filter>Utility\String</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\string\SlanderFilter.h">
+      <Filter>Utility\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\String\StringConvert.h">
+      <Filter>Utility\String</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Time\AdvancedPulse.h">
+      <Filter>Utility\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Time\Datetime.h">
+      <Filter>Utility\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Time\Pulse.h">
+      <Filter>Utility\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\etc\AppVersion.h">
+      <Filter>Utility\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Etc\BufferFormatter.hpp">
+      <Filter>Utility\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Etc\CommandParser.h">
+      <Filter>Utility\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Etc\CommandSwitcher.h">
+      <Filter>Utility\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Etc\CRC32.h">
+      <Filter>Utility\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Etc\Random.h">
+      <Filter>Utility\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\etc\RingBufferReader.hpp">
+      <Filter>Utility\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\State\ProcessManager.h">
+      <Filter>Utility\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\State\ProcessManagerEx.h">
+      <Filter>Utility\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\State\StateManager.h">
+      <Filter>Utility\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\State\StateManagerEx.h">
+      <Filter>Utility\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Configuration\INIFile.h">
+      <Filter>Utility\Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Configuration\ServerINIFile.h">
+      <Filter>Utility\Configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Calculator\Calculator.h">
+      <Filter>Utility\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Calculator\CalculatorManager.h">
+      <Filter>Utility\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\Security\PacketCryptor.h">
+      <Filter>Utility\Security</Filter>
+    </ClInclude>
+    <ClInclude Include="File\FileUtility.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\LowFile.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\OpenMode.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="File\XlReader\XlCell.h">
+      <Filter>File\XlReader</Filter>
+    </ClInclude>
+    <ClInclude Include="File\XlReader\XlReader.h">
+      <Filter>File\XlReader</Filter>
+    </ClInclude>
+    <ClInclude Include="File\XlReader\XlRecord.h">
+      <Filter>File\XlReader</Filter>
+    </ClInclude>
+    <ClInclude Include="File\XlReader\XlSheet.h">
+      <Filter>File\XlReader</Filter>
+    </ClInclude>
+    <ClInclude Include="File\XlReader\XlHeadLine\XlHeadLine.h">
+      <Filter>File\XlReader\XlHeadLine</Filter>
+    </ClInclude>
+    <ClInclude Include="File\XlReader\XlHeadLine\XlHeadNode.h">
+      <Filter>File\XlReader\XlHeadLine</Filter>
+    </ClInclude>
+    <ClInclude Include="Definition\SysDeps.h">
+      <Filter>Definition</Filter>
+    </ClInclude>
+    <ClInclude Include="Definition\TypeDef.h">
+      <Filter>Definition</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Thread\ThreadManager.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Script\Delimiter.cpp">
+      <Filter>Utility\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Script\ScriptFile.cpp">
+      <Filter>Utility\Script</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Macro\BaseMath.cpp">
+      <Filter>Utility\Macro</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Console\SysTray.cpp">
+      <Filter>Utility\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Debugging\BaseLog.cpp">
+      <Filter>Utility\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Debugging\DebugUtils.cpp">
+      <Filter>Utility\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Debugging\ExceptionReport.cpp">
+      <Filter>Utility\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Debugging\SystemInfo.cpp">
+      <Filter>Utility\Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\String\CWordSearchBitBinary.cpp">
+      <Filter>Utility\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\String\CWordSearchSimple.cpp">
+      <Filter>Utility\String</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\string\ForbidWord.cpp">
+      <Filter>Utility\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\String\PathString.cpp">
+      <Filter>Utility\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Time\AdvancedPulse.cpp">
+      <Filter>Utility\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Time\Datetime.cpp">
+      <Filter>Utility\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Time\Pulse.cpp">
+      <Filter>Utility\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Etc\CommandParser.cpp">
+      <Filter>Utility\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Etc\CRC32.cpp">
+      <Filter>Utility\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\State\ProcessManager.cpp">
+      <Filter>Utility\State</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\State\ProcessManagerEx.cpp">
+      <Filter>Utility\State</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\State\StateManager.cpp">
+      <Filter>Utility\State</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\State\StateManagerEx.cpp">
+      <Filter>Utility\State</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Configuration\INIFile.cpp">
+      <Filter>Utility\Configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Configuration\ServerINIFile.cpp">
+      <Filter>Utility\Configuration</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Calculator\Calculator.cpp">
+      <Filter>Utility\Calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Calculator\CalculatorManager.cpp">
+      <Filter>Utility\Calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="File\FileUtility.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\LowFile.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="File\XlReader\XlCell.cpp">
+      <Filter>File\XlReader</Filter>
+    </ClCompile>
+    <ClCompile Include="File\XlReader\XlReader.cpp">
+      <Filter>File\XlReader</Filter>
+    </ClCompile>
+    <ClCompile Include="File\XlReader\XlRecord.cpp">
+      <Filter>File\XlReader</Filter>
+    </ClCompile>
+    <ClCompile Include="File\XlReader\XlSheet.cpp">
+      <Filter>File\XlReader</Filter>
+    </ClCompile>
+    <ClCompile Include="File\XlReader\XlHeadLine\XlHeadLine.cpp">
+      <Filter>File\XlReader\XlHeadLine</Filter>
+    </ClCompile>
+    <ClCompile Include="File\XlReader\XlHeadLine\XlHeadNode.cpp">
+      <Filter>File\XlReader\XlHeadLine</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+</Project>
