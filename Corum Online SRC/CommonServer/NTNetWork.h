@@ -2,7 +2,7 @@
 
 #include "CommonServer.h"
 #include "IOleDBThread.h"
-#include "INetWork.h"
+#include "../I4DyuchiNET/inetwork.h"
 
 
 // 패킷 암호화 g_pNet 구성 변경 

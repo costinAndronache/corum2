@@ -1,5 +1,7 @@
 chdir %~dp0
 
+echo on 
+
 call .\setDirectoryVariables.bat
 
 echo "Begin installing products executables & libraries from centralizedOutput"
@@ -13,6 +15,10 @@ call :COPY_IN_ALL_PLACES CommonServer.pdb
 
 call :COPY_IN_ALL_PLACES BaseLibrary.lib
 call :COPY_IN_ALL_PLACES BaseLibrary.pdb
+
+call :COPY_IN_ALL_PLACES I4DyuchiNET.lib
+call :COPY_IN_ALL_PLACES I4DyuchiNET.pdb
+
 
 call :COPY_IN_ALL_PLACES SS3DGFunc.dll
 

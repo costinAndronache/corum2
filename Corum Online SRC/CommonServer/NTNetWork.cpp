@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ntnetwork.h"
 #include "NTAes.h"
-#include "network_guid.h"
+#include "../I4DyuchiNET/conetwork.h"
 
 
 CNTNetWork::CNTNetWork(void)
@@ -17,7 +17,7 @@ CNTNetWork::~CNTNetWork(void)
 
 BOOL	CNTNetWork::CreateNetwork(DESC_NETWORK* desc,DWORD dwUserAcceptInterval,DWORD dwServerAcceptInterval)
 {
-	return m_pNetwork->CreateNetwork(desc,dwUserAcceptInterval,dwServerAcceptInterval);
+	return m_pNetwork->CreateNetwork(desc,dwUserAcceptInterval,dwServerAcceptInterval, nullptr);
 }
 
 void 	CNTNetWork::BreakMainThread() 
@@ -277,13 +277,15 @@ HANDLE	CNTNetWork::GetCustomEventHandle(DWORD index)
 
 BOOL	CNTNetWork::PauseTimer(DWORD dwCustomEventIndex)
 {
-	return m_pNetwork->PauseTimer(dwCustomEventIndex);
+	return TRUE;
+	//return m_pNetwork->PauseTimer(dwCustomEventIndex);
 }
 
 
 BOOL	CNTNetWork::ResumeTimer(DWORD dwCustomEventIndex)
 {
-	return m_pNetwork->ResumeTimer(dwCustomEventIndex);
+	return TRUE;
+	//return m_pNetwork->ResumeTimer(dwCustomEventIndex);
 }
 /*
 BOOL	CNTNetWork::SendToServer(DWORD dwConnectionIndex,WSABUF* pBuf,DWORD dwNum,DWORD flag)
@@ -314,7 +316,8 @@ BOOL	CNTNetWork::SendToUser(DWORD dwConnectionIndex,PACKET_LIST* pList,DWORD fla
 
 HRESULT CNTNetWork::CreateInstance()
 {
-	return CoCreateInstance(CLSID_4DyuchiNET, NULL, CLSCTX_INPROC_SERVER, IID_4DyuchiNET, (void**)&m_pNetwork);
+	m_pNetwork = new Co4DyuchiNET;
+	return S_OK;
 } 
 
 void CNTNetWork::Release()

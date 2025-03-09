@@ -1,15 +1,14 @@
 #pragma once
 
-
 #include "stdafx.h"
 #include <initguid.h>
 #include "typedef.h"
-#include "NetWork_Guid.h"
 
+struct sockaddr_in;
 
 interface I4DyuchiNET : public IUnknown
 {
-	virtual BOOL			__stdcall			CreateNetwork(DESC_NETWORK* desc,DWORD dwUserAcceptInterval,DWORD dwServerAcceptInterval) = 0;
+	virtual	BOOL			__stdcall			CreateNetwork(DESC_NETWORK* desc,DWORD dwUserAcceptInterval,DWORD dwServerAcceptInterval,OnIntialFunc pFunc) = 0;
 	virtual  void 			__stdcall			BreakMainThread() = 0;
 	virtual  void			__stdcall			ResumeMainThread() = 0;
 
@@ -41,15 +40,15 @@ interface I4DyuchiNET : public IUnknown
 	virtual  BOOL			__stdcall			ConnectToServerWithServerSide(char* szIP,WORD port,CONNECTSUCCESSFUNC,CONNECTFAILFUNC,void* pExt) = 0;	
 	virtual  BOOL			__stdcall			StartServerWithUserSide(char* ip,WORD port) = 0;
 	virtual  BOOL			__stdcall			StartServerWithServerSide(char* ip,WORD port) = 0;
-	virtual  HANDLE			__stdcall			GetCustomEventHandle(DWORD index) = 0;
-	virtual	 BOOL			__stdcall			PauseTimer(DWORD dwCustomEventIndex) = 0;
-	virtual	 BOOL			__stdcall			ResumeTimer(DWORD dwCustomEventIndex) = 0;
 	
-	virtual BOOL			__stdcall			SendToServer(DWORD dwConnectionIndex,WSABUF* pBuf,DWORD dwNum,DWORD flag) = 0;	
-	virtual BOOL			__stdcall			SendToUser(DWORD dwConnectionIndex,WSABUF* pBuf,DWORD dwNum,DWORD flag) = 0;	
+	virtual  HANDLE			__stdcall			GetCustomEventHandle(DWORD index) = 0;	
+//	virtual	 BOOL			__stdcall			PauseTimer(DWORD dwCustomEventIndex) = 0;				//2007 / 12/19 removed by yuchi
+//	virtual	 BOOL			__stdcall			ResumeTimer(DWORD dwCustomEventIndex) = 0;				//2007 / 12/19 removed by yuchi
+	
+	
+	virtual BOOL			__stdcall			SendToServer(DWORD dwConnectionIndex,INET_BUF* pBuf,DWORD dwNum,DWORD flag) = 0;	
+	virtual BOOL			__stdcall			SendToUser(DWORD dwConnectionIndex,INET_BUF* pBuf,DWORD dwNum,DWORD flag) = 0;	
 	virtual BOOL			__stdcall			SendToServer(DWORD dwConnectionIndex,PACKET_LIST* pList,DWORD flag) = 0;
 	virtual BOOL			__stdcall			SendToUser(DWORD dwConnectionIndex,PACKET_LIST* pList,DWORD flag) = 0;
+	virtual BOOL			__stdcall			GetMyAddress(char* szOutIP,DWORD dwMaxLen) = 0;
 };
-
-
-//extern I4DyuchiNET* g_pNet;

@@ -397,6 +397,7 @@ bool ConnectToDBServer()
 	//Member DB
 	MEMBER_DB = g_pDb->CreateDBConnection();
 	Log(LOG_JUST_DISPLAY, "@ Connecting SQL Server(Member DB)...");
+	auto memberdb = g_DBInfo.Get(DT_MEMBER_DB, DBIT_CATALOG);
 	if(g_pDb->Connect(g_pThis->GetIPForMemberDB(), 
 		g_DBInfo.Get(DT_MEMBER_DB, DBIT_CATALOG),
 		g_DBInfo.Get(DT_MEMBER_DB, DBIT_ID),
@@ -414,6 +415,7 @@ bool ConnectToDBServer()
 	
 	Log(LOG_IMPORTANT, "@ Connecting SQL Server(Billing DB)...");
 
+	auto logdb = g_DBInfo.Get(DT_MEMBER_DB, DBIT_CATALOG);
 	if(g_pBillDb->Connect(g_pThis->GetIPForMemberDB(), 
 		g_DBInfo.Get(DT_MEMBER_DB, DBIT_CATALOG),
 		g_DBInfo.Get(DT_MEMBER_DB, DBIT_ID),

@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WorldServer", "..\WorldServ
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DungeonServer", "..\DungeonServer\DungeonServer.vcxproj", "{628B7382-2F78-4FA5-B92C-56E1F0FC1AD6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "I4DyuchiNET", "..\I4DyuchiNET\I4DyuchiNET.vcxproj", "{1B17878E-9CB1-422B-985C-F07C3E5678D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -47,6 +49,10 @@ Global
 		{628B7382-2F78-4FA5-B92C-56E1F0FC1AD6}.Debug|x86.Build.0 = Debug|Win32
 		{628B7382-2F78-4FA5-B92C-56E1F0FC1AD6}.Release|x86.ActiveCfg = Release|Win32
 		{628B7382-2F78-4FA5-B92C-56E1F0FC1AD6}.Release|x86.Build.0 = Release|Win32
+		{1B17878E-9CB1-422B-985C-F07C3E5678D8}.Debug|x86.ActiveCfg = Debug|Win32
+		{1B17878E-9CB1-422B-985C-F07C3E5678D8}.Debug|x86.Build.0 = Debug|Win32
+		{1B17878E-9CB1-422B-985C-F07C3E5678D8}.Release|x86.ActiveCfg = Release|Win32
+		{1B17878E-9CB1-422B-985C-F07C3E5678D8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
