@@ -1874,6 +1874,9 @@ void QueryAllServer()
 
 	for(int i =0; i<nRet; i++)
 	{
+		__lstrcpyn(RecordSet[i].IPForServer, "127.0.0.1", MAX_IP_LENGTH);
+		__lstrcpyn(RecordSet[i].IPForUser, "127.0.0.1", MAX_IP_LENGTH);
+
 		// Port°¡ ID
 		SERVER_DATA* pServer = g_pServerTable->AllocNewServer(RecordSet[ i ].Port-10000);		
 

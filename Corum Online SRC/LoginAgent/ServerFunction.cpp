@@ -473,22 +473,19 @@ BOOL QueryAllServer()
 		return FALSE;
 	}
 
-	for(int i=0; i<nRet; i++)
+	WORLD_SERVER_DATA* pServer = g_pServerTable->AllocNewServer(1);
+
+	if (!pServer)
 	{
-		WORLD_SERVER_DATA* pServer = g_pServerTable->AllocNewServer(RecordSet[i].dwWorldMapID);
-
-		if(!pServer)
-		{
-			Log(LOG_IMPORTANT, "WorldServer Alloc Failed! (dwWorldMapID:%d)", RecordSet[i].dwWorldMapID);
-			return FALSE;
-		}
-
-		pServer->wPortForUser	= RecordSet[i].wPortForUser;
-		pServer->dwIPForUser	= inet_addr(RecordSet[i].szIpForUser);
-		pServer->wPortForServer = RecordSet[i].wPortForServer;
-		pServer->dwIPForServer = inet_addr(RecordSet[i].szIpForServer);
-		memcpy(pServer->szIPForServer, RecordSet[i].szIpForServer, MAX_IP_LENGTH);
+		Log(LOG_IMPORTANT, "WorldServer Alloc Failed! (dwWorldMapID:%d)", 1);
+		return FALSE;
 	}
+
+	pServer->wPortForUser = 13201;
+	pServer->dwIPForUser = inet_addr("127.0.0.1");
+	pServer->wPortForServer = 17201;
+	pServer->dwIPForServer = inet_addr("127.0.0.1");
+	memcpy(pServer->szIPForServer, "127.0.0.1", MAX_IP_LENGTH);
 
 	return TRUE;
 }

@@ -431,7 +431,7 @@ void InitializePool()
 	InitializeStaticMemoryPool(g_pPartyBoardPool, sizeof(SPARTY_BOARD), 100, 1000);		
 
 	g_pItemResourcePool = CreateStaticMemoryPool();
-	InitializeStaticMemoryPool( g_pItemResourcePool, sizeof(SITEM_RESOURCE_EX), 3000, 3000);	
+	InitializeStaticMemoryPool( g_pItemResourcePool, sizeof(SITEM_RESOURCE_EX), 10000, 10000);	
 	
 	g_pPartyPool		= CreateStaticMemoryPool();
 	InitializeStaticMemoryPool( g_pPartyPool, sizeof( PARTY_USER ), 100, 100 );

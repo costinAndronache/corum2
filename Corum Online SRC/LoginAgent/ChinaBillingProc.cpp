@@ -32,6 +32,7 @@ void InitializeProcFunction()
 
 void ConnectToBillingServer()
 {
+	return;
 	if(g_pThis->IsBillingServerConnected())
 	{
 		Log(LOG_JUST_DISPLAY, "@ Already connected with billing server!");
@@ -57,6 +58,7 @@ void DisconnectBillingServer()
 
 void __stdcall FailToConnectBillingServer(void* pExt)
 {
+	return;
 	Log(LOG_IMPORTANT, "@ Failed To Connect Billing Server! (IP:%s, Port:%d)", 
 		g_pThis->GetIPForBillingServer(), g_pThis->GetPortForBillingServer() );
 

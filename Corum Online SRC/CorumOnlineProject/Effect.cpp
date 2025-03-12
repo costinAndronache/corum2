@@ -49,8 +49,11 @@ void EffectLayer::LoadScript(BOOL bChk)
 		{
 			for(int joint = 0; joint < m_Effect[i].bJointEffect; ++joint)
 			{
-				lstrcpy(temp, g_pObjManager->GetFile(m_Effect[i].dwResourceID+joint));			
-				g_pExecutive->PreLoadGXObject( temp );
+				auto fileContents = g_pObjManager->GetFile(m_Effect[i].dwResourceID + joint);
+				if (fileContents) {
+					lstrcpy(temp, fileContents);
+					g_pExecutive->PreLoadGXObject(temp);
+				}
 			}
 			
 			if (m_Effect[i].dwStatusResourceID)

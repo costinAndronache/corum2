@@ -28,6 +28,7 @@ void InitializeProcFunctionForLicensing()
 
 BOOL ConnectToLicensingServer()
 {
+	return TRUE;
 	if(g_pThis->IsLicensingServerConnected())
 	{
 		Log(LOG_IMPORTANT, "@ Already connected with Licensing server!");
@@ -69,6 +70,7 @@ void DisconnectLicensingServer()
 
 void __stdcall FailToConnectLicensingServer(void* pExt)
 {
+	return;
 	pExt;
 
 	Log(LOG_IMPORTANT, "@ Failed To Connect License Server!");
@@ -102,6 +104,7 @@ void __stdcall SuccessToConnectLicensingServer(DWORD dwConnectionIndex, void* pE
 
 void __stdcall OnDisconnectLicensingServer()
 {
+	return;
 	// 연결을 종료하길 원해서 종료한 경우... 
 	if(	g_pThis->IsLicensingServerConnected() && g_pThis->IsLicensingServerConnectionClosing() )
 	{
@@ -167,6 +170,7 @@ void __stdcall OnLicensingHeartbeat(DWORD dwEventIndex)
 
 void __stdcall OnLicensingTryConnect(DWORD dwEventIndex)
 {
+	return;
 	dwEventIndex;
 
 	Log(LOG_IMPORTANT, "try connctto lic");
@@ -176,6 +180,7 @@ void __stdcall OnLicensingTryConnect(DWORD dwEventIndex)
 
 void __stdcall OnLicensingSendInfo(DWORD dwEventIndex)
 {
+	return;
 	dwEventIndex;
 
 	if(!g_pUserTable) return;

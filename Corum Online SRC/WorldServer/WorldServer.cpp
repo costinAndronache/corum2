@@ -208,21 +208,21 @@ void SetDBInfo()
 {
 	if( IS_ABLE_SERVICE_TYPE(ST_DEVELOP) )
 	{
-		g_DBInfo.Set(DT_GAME_DB, DBIT_CATALOG, "Corum");
+		g_DBInfo.Set(DT_GAME_DB, DBIT_CATALOG, "Corum_corum2");
 		g_DBInfo.Set(DT_GAME_DB, DBIT_ID, "potato");
-		g_DBInfo.Set(DT_GAME_DB, DBIT_PW, "5378abc");
+		g_DBInfo.Set(DT_GAME_DB, DBIT_PW, "ahffk");
 
-		g_DBInfo.Set(DT_TOTAL_DB, DBIT_CATALOG, "Corum_Total_DB");
+		g_DBInfo.Set(DT_TOTAL_DB, DBIT_CATALOG, "Corum_Total_DB_corum2");
 		g_DBInfo.Set(DT_TOTAL_DB, DBIT_ID, "potato");
-		g_DBInfo.Set(DT_TOTAL_DB, DBIT_PW, "5378abc");
+		g_DBInfo.Set(DT_TOTAL_DB, DBIT_PW, "ahffk");
 
-		g_DBInfo.Set(DT_MEMBER_DB, DBIT_CATALOG, "member");
+		g_DBInfo.Set(DT_MEMBER_DB, DBIT_CATALOG, "Member_corum2");
 		g_DBInfo.Set(DT_MEMBER_DB, DBIT_ID, "potato");
-		g_DBInfo.Set(DT_MEMBER_DB, DBIT_PW, "5378abc");
+		g_DBInfo.Set(DT_MEMBER_DB, DBIT_PW, "ahffk");
 
-		g_DBInfo.Set(DT_LOG_DB, DBIT_CATALOG, "Log");
+		g_DBInfo.Set(DT_LOG_DB, DBIT_CATALOG, "Log_Corum_corum2");
 		g_DBInfo.Set(DT_LOG_DB, DBIT_ID, "potato");
-		g_DBInfo.Set(DT_LOG_DB, DBIT_PW, "5378abc");
+		g_DBInfo.Set(DT_LOG_DB, DBIT_PW, "ahffk");
 
 		return;
 	} // if( IS_ABLE_SERVICE_TYPE(ST_DEVELOP) )
@@ -483,7 +483,9 @@ int main(int argc, char* argv[])
 	LoadNoticeMessage();
 	LoadServerMessage();
 
-	g_pThis->ToggleUserAccept();	
+	g_pThis->ToggleUserAccept();
+	ListenForServerside();
+	ListenForUserside();
 
 	GetComputerName(g_MachineName.szBuffer,&g_MachineName.dwSize);
 	g_MachineName.wPort			= g_pThis->GetPortForUser();
