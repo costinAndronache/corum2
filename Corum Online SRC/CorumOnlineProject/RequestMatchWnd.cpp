@@ -71,7 +71,7 @@ void CRequestMatchWnd::RenderText()
 {	
 	RenderFont(g_Message[ETC_MESSAGE636].szMessage, m_fPosX+25, m_fPosX+55, m_fPosZ+6, m_fPosZ+20, GetStartOrder()+1);
 	
-	wsprintf(m_szInfo, g_Message[ETC_MESSAGE637].szMessage, m_szName); // "%s 님이 대결을 신청 하셨습니다. "
+	_snprintf(m_szInfo, sizeof(m_szInfo) - 1, g_Message[ETC_MESSAGE637].szMessage, m_szName); // "%s 님이 대결을 신청 하셨습니다. "
 	RenderFont(m_szInfo, m_fPosX+15, m_fPosX+250, m_fPosZ+40, m_fPosZ+54, GetStartOrder()+1);
 
 	RenderFont(g_Message[ETC_MESSAGE638].szMessage, m_fPosX+15, m_fPosX+250, m_fPosZ+60, m_fPosZ+74, GetStartOrder()+1);

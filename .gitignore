@@ -71,3 +71,5 @@ Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DFileStorage.dll
 Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DExecutiveForCorum.lib
 Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SS3DExecutiveForCorum.dll
 Corum Online SRC/INNER/1_LoginAgent Configurations_INNER/SizeReporter.txt
+/Corum Online SRC/centralizedOutput
+*.log

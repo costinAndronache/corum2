@@ -66,16 +66,16 @@ void CGuildJoinWnd::SetOrder()
 void CGuildJoinWnd::RenderText()
 {
 	if(m_bGuildType==__GCTYPE_GUILD__)
-		lstrcpy(m_szInfo, g_Message[ETC_MESSAGE299].szMessage);		// MSG_ID : 299 ; 길드 가입  
+		lstrcpyn(m_szInfo, g_Message[ETC_MESSAGE299].szMessage, sizeof(m_szInfo) - 1);		// MSG_ID : 299 ; 길드 가입  
 	else
-		lstrcpy(m_szInfo, g_Message[ETC_MESSAGE300].szMessage);		// MSG_ID : 300 ; 클랜 가입 
+		lstrcpyn(m_szInfo, g_Message[ETC_MESSAGE300].szMessage, sizeof(m_szInfo) - 1);		// MSG_ID : 300 ; 클랜 가입 
 
 	RenderFont(m_szInfo, m_fPosX+25, m_fPosX+85, m_fPosZ+6, m_fPosZ+18, GetStartOrder()+1);
 
 	if(m_bGuildType==__GCTYPE_GUILD__)
-		wsprintf(m_szInfo, g_Message[ETC_MESSAGE301].szMessage, m_szGuildName);	// MSG_ID : 301 ; %s 길드에 가입 하시겠습니까?
+		_snprintf(m_szInfo, sizeof(m_szInfo) - 1, g_Message[ETC_MESSAGE301].szMessage, m_szGuildName);	// MSG_ID : 301 ; %s 길드에 가입 하시겠습니까?
 	else 
-		wsprintf(m_szInfo, g_Message[ETC_MESSAGE302].szMessage, m_szGuildName);	// MSG_ID : 302 ; %s 클랜에 가입 하시겠습니까?
+		_snprintf(m_szInfo, sizeof(m_szInfo) - 1, g_Message[ETC_MESSAGE302].szMessage, m_szGuildName);	// MSG_ID : 302 ; %s 클랜에 가입 하시겠습니까?
 
 	RenderFont(m_szInfo, m_fPosX+15, m_fPosX+250, m_fPosZ+50, m_fPosZ+64, GetStartOrder()+1);	
 }

@@ -508,7 +508,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>DEVELOP_MODE;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>ENGLISH_LOCALIZNG;DEVELOP_MODE;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
@@ -524,6 +524,9 @@
       <ForceFileOutput>MultiplyDefinedSymbolOnly</ForceFileOutput>
       <OutputFile>$(OutDir)\CorumOnlineResult.exe</OutputFile>
     </Link>
+    <PostBuildEvent>
+      <Command>..\..\scripts\postBuildCentraliseOutput_CorumOnlineProject.bat</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

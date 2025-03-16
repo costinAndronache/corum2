@@ -78,12 +78,10 @@ BOOL CItemTradeShopWnd::Init()
 	InsertCheckInterface(7, 52, 252, 181, 6, CHECK_ITEM);
 	InsertCheckInterface(2, 189, 253, 201, 7, CHECK_BTN);
 */
-	for(int i = 0; i < MAX_TRADE*2; i++)
+	for(int i = 0; i < MAX_TRADE; i++)
 	{
-		if(i<MAX_TRADE)
 			memset(&g_pMainPlayer->m_pItemTrade[i], 0, sizeof(CItem));					
-		else
-			memset(&m_pTradeItem[(i-MAX_TRADE)], 0, sizeof(CItem));
+			memset(&m_pTradeItem[i], 0, sizeof(CItem));
 	}
 	
 	m_bInit	= TRUE;

@@ -410,7 +410,7 @@ void InitializePool()
 	InitializeStaticMemoryPool(g_pUserPool, sizeof(CUser), MAX_DATA_FOR_USER_POOL, MAX_DATA_FOR_USER_POOL);
 
 	g_pMonsterPool = CreateStaticMemoryPool();
-	InitializeStaticMemoryPool( g_pMonsterPool, sizeof( CMonster ), 110, 110 );
+	InitializeStaticMemoryPool( g_pMonsterPool, sizeof( CMonster ), 1000, 1000 );
 
 	g_pEffectPool = CreateStaticMemoryPool();
 	InitializeStaticMemoryPool( g_pEffectPool, sizeof( EffectDesc ), 1000, 1000 );

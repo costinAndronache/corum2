@@ -379,14 +379,7 @@ BOOL CInterface::InitInterface(BYTE byServer)
 			if(i==INTERFACE_USER)
 				continue;
 
-			strcpy(m_szName[i], m_pMenu[i]->m_szMenu);
-			nPosX = GetPPI(m_szName[i], "POSX", -1, szInfo);
-			nPosY = GetPPI(m_szName[i], "POSY", -1, szInfo);
-			
-			if(nPosX==0 && nPosY==0)			
-				m_pMenu[i]->SetPos(512 - m_pMenu[i]->m_fMaxSizeWidth/2, 384 - m_pMenu[i]->m_fMaxSizeHeight/2);
-			else
-				m_pMenu[i]->SetPos((float)nPosX, (float)nPosY);
+			m_pMenu[i]->SetPos(512 - m_pMenu[i]->m_fMaxSizeWidth / 2, 384 - m_pMenu[i]->m_fMaxSizeHeight / 2);
 		}
 	}
 
@@ -418,12 +411,19 @@ BOOL CInterface::InitInterface(BYTE byServer)
 				if(!m_bInit)
 					return FALSE;
 
-				m_pMenu[i]->SetActive(m_pMenu[i]->m_bFirst);
+				//m_pMenu[i]->SetActive(m_pMenu[i]->m_bFirst);
 			}
 			m_nSize[i*2]	= int(m_pMenu[i]->m_fMaxSizeWidth);
 			m_nSize[i*2+1]	= int(m_pMenu[i]->m_fMaxSizeHeight);			
 		}
 	}
+
+	//
+	m_pMenu[OK_WND]->Init();
+	// 
+	// 
+	//
+
 	g_bInitSoundEnalbe = TRUE;// 사운드 효과음 살리기
 	
 	m_byIndex = CUR_INTERFACE;
@@ -564,12 +564,36 @@ void CInterface::SetUp(BOOL bUp)
 	}
 }
 
+static void** copyValues(CMenu* menu[], int count = CUR_INTERFACE) {
+	void** result = new void* [count];
+	for (int i = 0; i < count; i++) {
+		result[i] = *(void**)menu[i];
+	}
+	return result;
+}
+
+static void analyze(CMenu* menu[], int count = CUR_INTERFACE) {
+	static void** initial = nullptr;
+	if (!initial) {
+		initial = copyValues(menu, count);
+	}
+
+	for (int i = 0; i < count; i++) {
+		if (initial[i] != *(void**)menu[i]) {
+			printf("WE HAVE A PROBLEM!");
+		}
+	}
+}
+
 void CInterface::Render()
-{		
+{
+	analyze(m_pMenu);
+
 	if(m_bInit)
 	{
 		for(int i = 0; i < m_byIndex; i++)
-		{	
+		{
+
 			if(m_pMenu[i]->m_bInit)
 			{
 				if(m_pMenu[i]->GetActive())
@@ -585,6 +609,8 @@ void CInterface::Render()
 					}
 				}
 			}
+
+			analyze(m_pMenu);
 		}
 	}
 }
