@@ -32,8 +32,17 @@ private:
 	static CGuildRankWnd* c_pThis;
 
 public:
-	static CGuildRankWnd*	GetInstance()		{ if(!c_pThis) c_pThis = new CGuildRankWnd; return c_pThis; }
-	static void			DestroyInstance()	{ if(c_pThis) { delete c_pThis; c_pThis = NULL;} }
+	static CGuildRankWnd*	GetInstance()		{ 
+		if(!c_pThis) c_pThis = new CGuildRankWnd; 
+		return c_pThis; 
+	}
+
+	static void			DestroyInstance()	{ 
+		if(c_pThis) { 
+			delete c_pThis; 
+			c_pThis = NULL;
+		} 
+	}
 
 	
 	BOOL	Init();

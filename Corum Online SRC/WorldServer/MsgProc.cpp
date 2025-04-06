@@ -231,20 +231,18 @@ void CmdTryToJoinDungeon(CWorldUser* pUser ,char* pMsg,DWORD dwLength)
 		return;
 	}
 
-	if(	IS_ABLE_SERVICE_TYPE(ST_DEVELOP) 
-	||	IS_ABLE_NATION(NC_JAPAN) )//hwoarang
-	{
-	if (pDungeon->m_byEntererMinLevel > pUser->m_dwLevel || pDungeon->m_byEntererMaxLevel < pUser->m_dwLevel)
-	{
-		// 레벨제한 걸렷나?
-		WSTC_DUNGEON_JOIN_FAILED	packet;
-		packet.bFailCode = DUNGEON_JOIN_FAIL_NOT_MINMAX_LEVEL;
-		packet.wDungeonID = pPacket->wDungeonID;
-		g_pNet->SendToUser(pUser->m_dwConnectionIndex, (char*)&packet, packet.GetPacketSize(), FLAG_SEND_NOT_ENCRYPTION);
-		Log(LOG_IMPORTANT, "Invalid Level, DungeonID : %d, Name : %s", pDungeon->m_dwID, pUser->m_szCharacterName);
-		return;
-	}
-
+	if(	IS_ABLE_SERVICE_TYPE(ST_DEVELOP) ||	IS_ABLE_NATION(NC_JAPAN)) { //howarang
+		if ((pDungeon->m_byEntererMinLevel > pUser->m_dwLevel || 
+			pDungeon->m_byEntererMaxLevel < pUser->m_dwLevel) && false) // disable level limit for now
+		{
+			// 레벨제한 걸렷나?
+			WSTC_DUNGEON_JOIN_FAILED	packet;
+			packet.bFailCode = DUNGEON_JOIN_FAIL_NOT_MINMAX_LEVEL;
+			packet.wDungeonID = pPacket->wDungeonID;
+			g_pNet->SendToUser(pUser->m_dwConnectionIndex, (char*)&packet, packet.GetPacketSize(), FLAG_SEND_NOT_ENCRYPTION);
+			Log(LOG_IMPORTANT, "Invalid Level, DungeonID : %d, Name : %s", pDungeon->m_dwID, pUser->m_szCharacterName);
+			return;
+		}
 	}
 
 	if (pDungeon->IsConquer())

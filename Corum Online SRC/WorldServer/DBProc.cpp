@@ -139,6 +139,10 @@ void QueryTypeUserInfo(DBRECEIVEDATA* pResult)
 	
 	VECTOR3 vDungeonPos = { (float)pDungeon->m_dWorldPos_X, 0.0f, (float)pDungeon->m_dWorldPos_Z };
 	VECTOR3 vStartPos	= { 0.f, 0.f, 0.f };
+
+	// for some reason all dungeons have invalid (x=0, z=0) coordinates in the database
+	vDungeonPos.x = 6800;
+	vDungeonPos.z = 8800;
 	
 	BOOL bRet;
 	if(pDungeon->m_dwID < 10)

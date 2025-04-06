@@ -65,13 +65,13 @@ void CmdLoginNormal(DWORD dwConnectionIndex, char* pMsg, DWORD dwLength)
 		return;
 	}
 
-	if(packet->dwVersion < g_dwVersion)
-	{
-		WSTC_LOGIN_FAIL	packet;
-		packet.bResult = LOGIN_FAIL_INVALID_VERSION;		//버젼이 낮음 
-		SendToUser(dwConnectionIndex, (char*)&packet, packet.GetPacketSize() , FLAG_SEND_NOT_ENCRYPTION);
-		return;
-	}	
+	//if(packet->dwVersion < g_dwVersion)
+	//{
+	//	WSTC_LOGIN_FAIL	packet;
+	//	packet.bResult = LOGIN_FAIL_INVALID_VERSION;		//버젼이 낮음 
+	//	SendToUser(dwConnectionIndex, (char*)&packet, packet.GetPacketSize() , FLAG_SEND_NOT_ENCRYPTION);
+	//	return;
+	//}	
 
 	// 최대 접속 유저수 초과 
 	if(g_pUserTable->GetCount() >= g_pThis->GetMaxUserAllowedNum())		

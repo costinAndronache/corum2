@@ -860,6 +860,10 @@ bool ConnectToDBServer()
 
 	wsprintf( szDbName, "%s%s", DEFAULT_GAME_DB, g_pThis->GetServerSetCode() );	
 
+	auto ip = g_pThis->GetIPForGameDB();
+	auto id = g_DBInfo.Get(DT_GAME_DB, DBIT_ID);
+	auto pw = g_DBInfo.Get(DT_GAME_DB, DBIT_PW);
+
 	if(g_pDb->Connect(	g_pThis->GetIPForGameDB(), szDbName, 
 						g_DBInfo.Get(DT_GAME_DB,DBIT_ID), 
 						g_DBInfo.Get(DT_GAME_DB,DBIT_PW), 20, /*10, FALSE,*/ (BYTE)GAME_DB) < 0)
@@ -1919,7 +1923,16 @@ void QueryAllServer()
 	{
 		DUNGEON_DATA_EX* pDungeon = g_pDungeonTable->AllocNewDungeon( (WORD)rs[i].m_dwID );
 		memcpy((DUNGEON_DATA*)pDungeon, &rs[i], sizeof(DUNGEON_DATA));
-				
+		
+		// PATCH to make these fucking dungeons available
+		if (pDungeon->m_dwID == 3004 || pDungeon->m_dwID == 3002) {
+			rs[i].m_dwPort = 16204;
+		}
+
+		if (pDungeon->m_dwID == 3015) {
+			rs[i].m_dwPort = 16205;
+		}
+
 		pDungeon->m_pServer = g_pServerTable->GetServerInfo(rs[i].m_dwPort-10000);
 		
 		if (pDungeon->m_dwID > 2000 && pDungeon->m_dwID < 3000)
@@ -2100,24 +2113,29 @@ BOOL FindEmptyPosNearDungeon(BYTE bWorldID, VECTOR3* vpDungeonPos, VECTOR3 *vpNe
 	VECTOR3		vPos = { 0.f, 0.f, 0.f };
 	DWORD		dwCount = 0;	
 
-	while(dwCount < 4)
+	while(dwCount < 20)
 	{
 		vPos = *vpDungeonPos;
 		dwCount++;
 		
 		float fDistance = (bVillage) ? 5.0f : 2.0f;
 
-		switch(dwCount)
+		switch((dwCount % 4) + 1)
 		{
-			case 1:		vPos.x -= (TILE_WIDTH * fDistance);	break;		//辑率规氢 
-			case 2:		vPos.z -= (TILE_WIDTH * fDistance);	break;		//巢率规氢
-			case 3:		vPos.z += (TILE_WIDTH * fDistance);	break;		//合率规氢
-			case 4:		vPos.x += (TILE_WIDTH * fDistance);	break;		//悼率规氢 
+			case 1:		vPos.x -= dwCount * (TILE_WIDTH * fDistance);	break;		//辑率规氢 
+			case 2:		vPos.z -= dwCount * (TILE_WIDTH * fDistance);	break;		//巢率规氢
+			case 3:		vPos.z += dwCount * (TILE_WIDTH * fDistance);	break;		//合率规氢
+			case 4:		vPos.x += dwCount * (TILE_WIDTH * fDistance);	break;		//悼率规氢 
 		}		
 
 		pTile = g_pMap[bWorldID]->GetTile(vPos.x, vPos.z);	
 
-		if(!pTile)	return FALSE;
+		if (!pTile) {
+			printf("Could not find tile at: (%.1f, %.1f), dungeonPos: (%.1f, %.1f)\n", 
+				vPos.x, vPos.z,
+				vpDungeonPos->x, vpDungeonPos->z);
+			continue;
+		}
 
 		if(pTile->wAttr.uAttr != 1)
 		{
